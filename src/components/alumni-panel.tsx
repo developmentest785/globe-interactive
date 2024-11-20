@@ -1,9 +1,10 @@
-import { Alumni } from '@/data/mockAlumni';
 import { motion } from 'framer-motion';
+import { Alumni } from '@/data/mockAlumni';
+import type { Feature } from 'geojson';
 import { X, Linkedin } from 'lucide-react';
 
 interface AlumniPanelProps {
-  country: string | null;
+  country: Feature | null;
   alumni: Alumni[];
   onClose: () => void;
 }
@@ -15,7 +16,12 @@ export default function AlumniPanel({
 }: AlumniPanelProps) {
   if (!country) return null;
 
-  const countryAlumni = alumni.filter((a) => a.country === country);
+  const countryName = country.properties?.ISO_A2;
+  if (!countryName) return null;
+
+  const countryFullName = country.properties?.NAME;
+
+  const countryAlumni = alumni.filter((a) => a.country === countryName);
   if (countryAlumni.length === 0) return null;
 
   return (
@@ -27,17 +33,24 @@ export default function AlumniPanel({
       className="fixed right-0 top-0 z-20 h-full w-96 bg-white shadow-xl overflow-y-auto"
     >
       <div className="p-6">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">
-            {country} Alumni ({countryAlumni.length})
-          </h2>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-            aria-label="Close panel"
-          >
-            <X className="w-6 h-6 text-gray-600" />
-          </button>
+        <div className="flex flex-col justify-between">
+          <div className="flex justify-between items-center">
+            <h2 className="text-2xl font-bold text-gray-800">
+              {`${countryFullName}${countryAlumni.length ? "'s" : ''}`} Alumni
+            </h2>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Close panel"
+            >
+              <X className="w-6 h-6 text-gray-600" />
+            </button>
+          </div>
+          <div className="text-gray-500 text-sm mb-6">
+            {countryAlumni.length} alumni from{' '}
+            {`${countryFullName} ${countryAlumni.length === 1 ? 'is' : 'are'}`}
+            {} part of our community.
+          </div>
         </div>
 
         <div className="space-y-6">

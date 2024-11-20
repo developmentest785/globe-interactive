@@ -69,5 +69,16 @@ export const mockAlumni: Alumni[] = [
     graduationYear: 2018,
     imageUrl: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb',
     linkedIn: 'https://linkedin.com/in/example6'
+  },
+  // pakistan mock
+  {
+    id: '7',
+    name: 'Ali Khan',
+    country: 'PK',
+    role: 'Software Engineer',
+    company: 'Careem',
+    graduationYear: 2019,
+    imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
+    linkedIn: 'https://linkedin.com/in/example7'
   }
 ];

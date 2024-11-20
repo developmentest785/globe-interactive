@@ -1,27 +1,30 @@
-import React, { useRef, useLayoutEffect } from 'react';
-import { extend } from '@react-three/fiber';
-import Globe, { GlobeMethods, GlobeProps } from 'react-globe.gl';
+import React, { useLayoutEffect, useRef } from "react"
+import { extend } from "@react-three/fiber"
+import Globe from "react-globe.gl"
+import type { GlobeMethods, GlobeProps } from "react-globe.gl"
 
-extend({ Globe });
+extend({ Globe })
 
 const Earth = React.forwardRef<GlobeMethods, GlobeProps>(
-  ({ ...props }, ref) => {
-    const localRef = useRef<GlobeMethods>();
+	({ ...props }, ref) => {
+		const localRef = useRef<GlobeMethods>()
 
-    useLayoutEffect(() => {
-      if (localRef.current && ref) {
-        if (typeof ref === 'function') {
-          ref(localRef.current);
-        } else {
-          ref.current = localRef.current;
-        }
-      }
-    }, [ref]);
+		useLayoutEffect(() => {
+			if (localRef.current && ref) {
+				if (typeof ref === "function") {
+					ref(localRef.current)
+				} else {
+					ref.current = localRef.current
+				}
+			}
+		}, [ref])
 
-    return <Globe ref={localRef} {...props} />;
-  }
-);
-Earth.displayName = 'Earth';
+		return <Globe ref={localRef} {...props} />
+	}
+)
+Earth.displayName = "Earth"
+
+export default Earth
 
 // const Earth = (props: Props) => {
 //   // This reference will give us direct access to the ThreeGlobe class
@@ -44,5 +47,3 @@ Earth.displayName = 'Earth';
 //   // Any valid properties of that class are valid props
 //   return <threeGlobe {...props} ref={globeRef} />;
 // };
-
-export default Earth;
