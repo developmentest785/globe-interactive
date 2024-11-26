@@ -2,6 +2,7 @@ import { useRef, useState } from "react"
 import { Feature } from "geojson"
 import { GlobeMethods } from "react-globe.gl"
 
+import { cn } from "@/lib/utils"
 import { useCountryPicker } from "@/hooks/use-country-picker"
 
 import Earth from "@/components/globe/earth"
@@ -30,7 +31,13 @@ function App() {
 	}, 5000)
 
 	return (
-		<div className="relative h-screen w-full bg-gray-950">
+		<div
+			className={cn(
+				"relative h-screen w-full bg-orange-200"
+				// create a circle in the middle of the screen
+				// "after:absolute after:inset-1/2 after:z-10 after:h-[90vw] after:w-[90vw] after:max-w-[972px] after:-translate-x-1/2 after:-translate-y-1/2 after:transform after:rounded-full after:border after:border-black after:shadow-lg"
+			)}
+		>
 			<Earth ref={globeRef} data={polygonData} />
 		</div>
 	)

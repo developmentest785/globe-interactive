@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react"
-import background from "@/assets/earth-dark.jpg"
-import sky from "@/assets/night-sky.png"
+import background from "@/assets/earth-blue-marble.jpg"
+import bump from "@/assets/earth-topology.png"
+// import sky from "@/assets/night-sky.png"
 import { mockAlumni } from "@/data/mockAlumni"
 import { AnimatePresence } from "framer-motion"
 import { Feature } from "geojson"
 import Globe, { GlobeMethods, GlobeProps } from "react-globe.gl"
+
+// import * as THREE from "three"
 
 import { useCountryPicker } from "@/hooks/use-country-picker"
 import useViewport from "@/hooks/useViewport"
@@ -29,13 +32,6 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 			if (globeRef?.current) {
 				globeRef.current.controls().autoRotate = true
 				globeRef.current.controls().autoRotateSpeed = 0.3
-				globeRef.current.pointOfView(
-					{
-						lat: 0,
-						altitude: 2,
-					},
-					3000
-				)
 			}
 		}
 
@@ -107,7 +103,7 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 				globeRef.current.pointOfView(
 					{
 						lat: 0,
-						altitude: 2,
+						altitude: 4,
 					},
 					1500
 				)
@@ -125,12 +121,12 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 					globeRef.current.pointOfView(
 						{
 							lat: 0,
-							altitude: 2,
+							altitude: 4,
 						},
 						1500
 					)
 				}
-			}, 1500)
+			}, 5000)
 			return () => clearTimeout(resetGlobe)
 		}, [hoveredEarth, selectedCountry, globeRef])
 
@@ -146,7 +142,7 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 				globeRef.current.pointOfView(
 					{
 						lat: 0,
-						altitude: 2,
+						altitude: 4,
 					},
 					1500
 				)
@@ -157,13 +153,16 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 			<ErrorBoundary>
 				<Globe
 					ref={ref as React.MutableRefObject<GlobeMethods>}
-					backgroundImageUrl={sky}
+					animateIn={false}
+					// backgroundImageUrl={sky}
+					backgroundColor="rgba(0,0,0,0)"
 					globeImageUrl={background}
+					bumpImageUrl={bump}
 					width={window.innerWidth | width}
 					height={window.innerHeight | height}
 					waitForGlobeReady={true}
 					polygonsData={data}
-					atmosphereAltitude={0.1}
+					atmosphereAltitude={0.15}
 					atmosphereColor="#aaa"
 					polygonAltitude={(d) => {
 						switch (d) {
@@ -174,7 +173,7 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 							case selectedCountry:
 								return 0.06
 							default:
-								return 0.01
+								return 0.001
 						}
 					}}
 					polygonsTransitionDuration={300}
@@ -212,10 +211,27 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 					onPolygonHover={handleCountryHover}
 					onPolygonClick={handleCountryClick}
 					onGlobeClick={() => setSelectedCountry(null)}
-					pointLat={0}
-					pointLng={0}
-					pointAltitude={2}
 					onGlobeReady={onGlobeReady}
+					// create a border around the earth just like a dive has a border that is a circle
+					// customLayerData={[
+					// 	{
+					// 		lat: 0,
+					// 		lng: 0,
+					// 		alt: -1,
+					// 		radius: 110,
+					// 		color: "green",
+					// 	},
+					// ]}
+					// customThreeObject={(d) =>
+					// 	new THREE.Mesh(
+					// 		new THREE.SphereGeometry(d.radius, 32, 32),
+					// 		new THREE.MeshLambertMaterial({
+					// 			color: d.color,
+					// 			transparent: true,
+					// 			opacity: 1,
+					// 		})
+					// 	)
+					// }
 					{...props}
 				/>
 
