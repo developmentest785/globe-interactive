@@ -4,14 +4,14 @@ import bump from "@/assets/earth-topology.png"
 import { AnimatePresence } from "framer-motion"
 import { Feature } from "geojson"
 import { Maximize, Shrink } from "lucide-react"
-import Globe, { GlobeMethods, GlobeProps } from "react-globe.gl"
+import Globe from "react-globe.gl"
+import type { GlobeMethods, GlobeProps } from "react-globe.gl"
 
 import { cn } from "@/lib/utils"
 import { useCountryPicker } from "@/hooks/use-country-picker"
 import useViewport from "@/hooks/useViewport"
 
 import AlumniPanel from "@/components/alumni-panel"
-import { ErrorBoundary } from "@/components/error-boundary"
 
 import { mockAlumni } from "./data/mockAlumni"
 
@@ -186,102 +186,100 @@ function App() {
 				{isFullScreen ? <Shrink size={32} /> : <Maximize size={32} />}
 			</button>
 
-			<ErrorBoundary>
-				<Globe
-					ref={globeRef}
-					animateIn={false}
-					// backgroundImageUrl={sky}
-					backgroundColor="rgba(0,0,0,0)"
-					globeImageUrl={background}
-					bumpImageUrl={bump}
-					width={window.innerWidth | width}
-					height={window.innerHeight | height}
-					waitForGlobeReady={true}
-					polygonsData={polygonData}
-					atmosphereAltitude={0.15}
-					atmosphereColor="#aaa"
-					polygonAltitude={(d) => {
-						switch (d) {
-							case hoveredCountry && selectedCountry:
-								return 0.06
-							case selectedCountry:
-								return 0.06
-							default:
-								return 0.01
-						}
-					}}
-					polygonsTransitionDuration={300}
-					polygonCapColor={(d) => {
-						switch (d) {
-							case hoveredCountry && selectedCountry:
-								return "rgba(254, 215, 170, 1)"
-							case selectedCountry:
-								return "rgba(254, 215, 170, 1)"
-							default:
-								return "rgba(254, 215, 170, 0.6)"
-						}
-					}}
-					polygonSideColor={(d) => {
-						switch (d) {
-							case hoveredCountry && selectedCountry:
-								return "#fff"
-							case selectedCountry:
-								return "#fff"
-							default:
-								return "transparent"
-						}
-					}}
-					polygonStrokeColor={(d) => {
-						// d === (hoveredCountry || selectedCountry) ? '#eee' : '#666'
-						switch (d) {
-							case hoveredCountry && selectedCountry:
-								return "#fff"
-							case selectedCountry:
-								return "#fff"
-							default:
-								return "#fff"
-						}
-					}}
-					onPolygonHover={handleCountryHover}
-					onPolygonClick={handleCountryClick}
-					onGlobeClick={() => setSelectedCountry(null)}
-					onGlobeReady={onGlobeReady}
-					// create a border around the earth just like a dive has a border that is a circle
-					// customLayerData={[
-					// 	{
-					// 		lat: 0,
-					// 		lng: 0,
-					// 		alt: -1,
-					// 		radius: 110,
-					// 		color: "green",
-					// 	},
-					// ]}
-					// customThreeObject={(d) =>
-					// 	new THREE.Mesh(
-					// 		new THREE.SphereGeometry(d.radius, 32, 32),
-					// 		new THREE.MeshLambertMaterial({
-					// 			color: d.color,
-					// 			transparent: true,
-					// 			opacity: 1,
-					// 		})
-					// 	)
-					// }
-				/>
+			<Globe
+				ref={globeRef}
+				animateIn={false}
+				// backgroundImageUrl={sky}
+				backgroundColor="rgba(0,0,0,0)"
+				globeImageUrl={background}
+				bumpImageUrl={bump}
+				width={window.innerWidth | width}
+				height={window.innerHeight | height}
+				waitForGlobeReady={true}
+				polygonsData={polygonData}
+				atmosphereAltitude={0.15}
+				atmosphereColor="#aaa"
+				polygonAltitude={(d) => {
+					switch (d) {
+						case hoveredCountry && selectedCountry:
+							return 0.06
+						case selectedCountry:
+							return 0.06
+						default:
+							return 0.01
+					}
+				}}
+				polygonsTransitionDuration={300}
+				polygonCapColor={(d) => {
+					switch (d) {
+						case hoveredCountry && selectedCountry:
+							return "rgba(254, 215, 170, 1)"
+						case selectedCountry:
+							return "rgba(254, 215, 170, 1)"
+						default:
+							return "rgba(254, 215, 170, 0.6)"
+					}
+				}}
+				polygonSideColor={(d) => {
+					switch (d) {
+						case hoveredCountry && selectedCountry:
+							return "#fff"
+						case selectedCountry:
+							return "#fff"
+						default:
+							return "transparent"
+					}
+				}}
+				polygonStrokeColor={(d) => {
+					// d === (hoveredCountry || selectedCountry) ? '#eee' : '#666'
+					switch (d) {
+						case hoveredCountry && selectedCountry:
+							return "#fff"
+						case selectedCountry:
+							return "#fff"
+						default:
+							return "#fff"
+					}
+				}}
+				onPolygonHover={handleCountryHover}
+				onPolygonClick={handleCountryClick}
+				onGlobeClick={() => setSelectedCountry(null)}
+				onGlobeReady={onGlobeReady}
+				// create a border around the earth just like a dive has a border that is a circle
+				// customLayerData={[
+				// 	{
+				// 		lat: 0,
+				// 		lng: 0,
+				// 		alt: -1,
+				// 		radius: 110,
+				// 		color: "green",
+				// 	},
+				// ]}
+				// customThreeObject={(d) =>
+				// 	new THREE.Mesh(
+				// 		new THREE.SphereGeometry(d.radius, 32, 32),
+				// 		new THREE.MeshLambertMaterial({
+				// 			color: d.color,
+				// 			transparent: true,
+				// 			opacity: 1,
+				// 		})
+				// 	)
+				// }
+			/>
 
-				{selectedCountry && (
-					<AnimatePresence>
-						<AlumniPanel
-							key="panel"
-							country={selectedCountry}
-							alumni={mockAlumni}
-							onClose={() => {
-								setSelectedCountry(null)
-								setHoveredCountry(null)
-							}}
-						/>
-					</AnimatePresence>
-				)}
-			</ErrorBoundary>
+			{selectedCountry && (
+				<AnimatePresence>
+					<AlumniPanel
+						key="panel"
+						country={selectedCountry}
+						alumni={mockAlumni}
+						onClose={() => {
+							setSelectedCountry(null)
+							setHoveredCountry(null)
+						}}
+					/>
+				</AnimatePresence>
+			)}
 		</div>
 	)
 }

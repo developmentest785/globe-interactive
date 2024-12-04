@@ -27,8 +27,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       framer-motion:
-        specifier: ^11.11.17
-        version: 11.11.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^11.13.1
+        version: 11.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       geojson:
         specifier: ^0.5.0
         version: 0.5.0
@@ -50,18 +50,6 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.15)
-      three:
-        specifier: ^0.170.0
-        version: 0.170.0
-      three-conic-polygon-geometry:
-        specifier: ^1.6.5
-        version: 1.6.5(three@0.170.0)
-      three-geojson-geometry:
-        specifier: ^1.3.3
-        version: 1.3.3(three@0.170.0)
-      three-globe:
-        specifier: ^2.35.2
-        version: 2.35.2(three@0.170.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.13.0
@@ -81,9 +69,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.1
         version: 18.3.1
-      '@types/three':
-        specifier: ^0.170.0
-        version: 0.170.0
       '@vitejs/plugin-react':
         specifier: ^4.3.3
         version: 4.3.3(vite@5.4.11(@types/node@22.9.0))
@@ -1308,8 +1293,8 @@ packages:
   frame-ticker@1.0.3:
     resolution: {integrity: sha512-E0X2u2JIvbEMrqEg5+4BpTqaD22OwojJI63K7MdKHdncjtAhGRbCR8nJCr2vwEt9NWBPCPcu70X9smPviEBy8Q==}
 
-  framer-motion@11.11.17:
-    resolution: {integrity: sha512-O8QzvoKiuzI5HSAHbcYuL6xU+ZLXbrH7C8Akaato4JzQbX2ULNeniqC2Vo5eiCtFktX9XsJ+7nUhxcl2E2IjpA==}
+  framer-motion@11.13.1:
+    resolution: {integrity: sha512-F40tpGTHByhn9h3zdBQPcEro+pSLtzARcocbNqAyfBI+u9S+KZuHH/7O9+z+GEkoF3eqFxfvVw0eBDytohwqmQ==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -1577,6 +1562,12 @@ packages:
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  motion-dom@11.13.0:
+    resolution: {integrity: sha512-Oc1MLGJQ6nrvXccXA89lXtOqFyBmvHtaDcTRGT66o8Czl7nuA8BeHAd9MQV1pQKX0d2RHFBFaw5g3k23hQJt0w==}
+
+  motion-utils@11.13.0:
+    resolution: {integrity: sha512-lq6TzXkH5c/ysJQBxgLXgM01qwBH1b4goTPh57VvZWJbVJZF/0SB31UWEn4EIqbVPf3au88n2rvK17SpDTja1A==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -3424,8 +3415,10 @@ snapshots:
     dependencies:
       simplesignal: 2.1.7
 
-  framer-motion@11.11.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
+      motion-dom: 11.13.0
+      motion-utils: 11.13.0
       tslib: 2.8.1
     optionalDependencies:
       react: 18.3.1
@@ -3636,6 +3629,10 @@ snapshots:
       brace-expansion: 2.0.1
 
   minipass@7.1.2: {}
+
+  motion-dom@11.13.0: {}
+
+  motion-utils@11.13.0: {}
 
   ms@2.1.3: {}
 
