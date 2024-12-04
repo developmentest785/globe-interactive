@@ -62,16 +62,16 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 				if (feature.properties.ISO_A2 === "US") {
 					const lng =
 						feature.bbox &&
-						feature.bbox[0] + (feature.bbox[2] - feature.bbox[0]) / 2 + 28
+						feature.bbox[0] + (feature.bbox[2] - feature.bbox[0]) / 2 + 18
 					const lat =
 						feature.bbox &&
-						feature.bbox[1] + (feature.bbox[3] - feature.bbox[1]) / 2 + 5
+						feature.bbox[1] + (feature.bbox[3] - feature.bbox[1]) / 2
 					console.log("lng", lng, "lat", lat)
 
 					if (globeRef?.current) {
 						globeRef.current.pointOfView(
 							{
-								altitude: 1,
+								altitude: 1.5,
 								lng: lng,
 								lat: lat,
 							},
@@ -82,7 +82,7 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 					if (globeRef?.current) {
 						globeRef.current.pointOfView(
 							{
-								altitude: 1,
+								altitude: 1.5,
 								// bbox to lng lat
 								lng:
 									feature.bbox &&
@@ -99,11 +99,11 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 				setSelectedCountry(feature)
 			} else {
 				console.log("reset globe")
-				globeRef.current.controls().autoRotate = true
+				// globeRef.current.controls().autoRotate = true
 				globeRef.current.pointOfView(
 					{
 						lat: 0,
-						altitude: 4,
+						altitude: 3.4,
 					},
 					1500
 				)
@@ -117,11 +117,11 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 				if (hoveredEarth && selectedCountry) return
 				if (globeRef?.current) {
 					console.log("reset globe")
-					globeRef.current.controls().autoRotate = true
+					// globeRef.current.controls().autoRotate = true
 					globeRef.current.pointOfView(
 						{
 							lat: 0,
-							altitude: 4,
+							altitude: 3.4,
 						},
 						1500
 					)
@@ -142,7 +142,7 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 				globeRef.current.pointOfView(
 					{
 						lat: 0,
-						altitude: 4,
+						altitude: 3.4,
 					},
 					1500
 				)
@@ -168,29 +168,29 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 						switch (d) {
 							case hoveredCountry && selectedCountry:
 								return 0.06
-							case hoveredCountry:
-								return 0.03
 							case selectedCountry:
 								return 0.06
 							default:
-								return 0.001
+								return 0.01
 						}
 					}}
 					polygonsTransitionDuration={300}
 					polygonCapColor={(d) => {
 						switch (d) {
+							case hoveredCountry && selectedCountry:
+								return "rgba(254, 215, 170, 1)"
+							case selectedCountry:
+								return "rgba(254, 215, 170, 1)"
 							default:
-								return "transparent"
+								return "rgba(254, 215, 170, 0.6)"
 						}
 					}}
 					polygonSideColor={(d) => {
 						switch (d) {
-							case hoveredCountry:
-								return "#bbb"
 							case hoveredCountry && selectedCountry:
-								return "#eee"
+								return "#fff"
 							case selectedCountry:
-								return "#666"
+								return "#fff"
 							default:
 								return "transparent"
 						}
@@ -198,14 +198,12 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 					polygonStrokeColor={(d) => {
 						// d === (hoveredCountry || selectedCountry) ? '#eee' : '#666'
 						switch (d) {
-							case hoveredCountry:
-								return "#bbb"
 							case hoveredCountry && selectedCountry:
-								return "#eee"
+								return "#fff"
 							case selectedCountry:
-								return "#666"
+								return "#fff"
 							default:
-								return "#666"
+								return "#fff"
 						}
 					}}
 					onPolygonHover={handleCountryHover}
@@ -238,9 +236,13 @@ const Earth = React.forwardRef<GlobeMethods, EarthProps>(
 				{selectedCountry && (
 					<AnimatePresence>
 						<AlumniPanel
+							key="panel"
 							country={selectedCountry}
 							alumni={mockAlumni}
-							onClose={() => setSelectedCountry(null)}
+							onClose={() => {
+								setSelectedCountry(null)
+								setHoveredCountry(null)
+							}}
 						/>
 					</AnimatePresence>
 				)}
