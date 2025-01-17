@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { mockAlumni } from "@/data/mockAlumni"
 import { Feature } from "geojson"
 import Globe from "react-globe.gl"
+// import type { GlobeMethods, GlobeProps } from "react-globe.gl"
 import type { GlobeMethods } from "react-globe.gl"
 import * as THREE from "three"
 
@@ -31,20 +32,18 @@ function SimpleGlobe({
 }: SimpleGlobeProps) {
 	const globeRef = useRef<GlobeMethods | undefined>(undefined)
 	const { countries, cities } = useCountryPicker()
-	const [polygonData, setPolygonData] = useState<Feature[]>([])
-	const [markerData, setMarkerData] = useState<Feature[]>([])
 	const { width, height } = useViewport()
 	const {
 		selectedCountry,
 		setSelectedCountry,
-		// hoveredCountry,
+		hoveredCountry,
 		// setHoveredCountry,
 	} = useCountryPicker()
 	const [hoveredEarth, setHoveredEarth] = useState<boolean>(false)
 
 	const markerSvg = `<svg style="color: ${markerColor}" viewBox="-4 0 36 36">
 	  <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
-	  <circle fill="black" cx="14" cy="14" r="7"></circle>
+	  <circle fill={${hexColor}} cx="14" cy="14" r="7"></circle>
 	</svg>`
 
 	const onGlobeReady = () => {
@@ -90,8 +89,23 @@ function SimpleGlobe({
 		el.style.color = markerColor
 		el.style.width = `${markerSize}px`
 
+		// @ts-expect-error - ignore
+		el.style["pointer-events"] = "auto"
 		el.style.cursor = "pointer"
-		// el.onclick = () => console.info(d)
+		el.onclick = () => {
+			console.log("clicked marker")
+			if (globeRef.current) {
+				globeRef.current.pointOfView(
+					{
+						altitude: 1.5,
+						lat: 0,
+						lng: 0,
+					},
+					1500
+				)
+			}
+			setHoveredEarth(hoveredEarth ? false : true)
+		}
 		return el
 	}
 
@@ -118,7 +132,6 @@ function SimpleGlobe({
 	// 		if (globeRef?.current) {
 	// 			console.log("hovered country", d, globeRef.current.pointOfView())
 	// 			setHoveredEarth(true)
-	// 			setHoveredCountry(d as Feature)
 	// 			globeRef.current.controls().autoRotate = false
 	// 		}
 	// 	} else {
@@ -126,7 +139,6 @@ function SimpleGlobe({
 	// 		if (globeRef?.current) {
 	// 			console.log("reset globe")
 	// 			setHoveredEarth(false)
-	// 			setHoveredCountry(null)
 	// 			globeRef.current.controls().autoRotate = true
 	// 		}
 	// 	}
@@ -199,7 +211,7 @@ function SimpleGlobe({
 			if (hoveredEarth && selectedCountry) return
 			if (globeRef?.current) {
 				console.log("reset globe")
-				// globeRef.current.controls().autoRotate = true
+				globeRef.current.controls().autoRotate = true
 				globeRef.current.pointOfView(
 					{
 						lat: 0,
@@ -255,7 +267,6 @@ function SimpleGlobe({
 				width={window.innerWidth | width}
 				height={window.innerHeight | height}
 				waitForGlobeReady={true}
-				polygonsData={polygonData}
 				atmosphereAltitude={0.15}
 				atmosphereColor="#aaa"
 				hexPolygonsData={countries?.features}
@@ -264,8 +275,20 @@ function SimpleGlobe({
 				hexPolygonUseDots={false}
 				hexBinPointWeight={3}
 				hexBinResolution={2}
-				// hexPolygonAltitude={ polygonAltitude}
 				hexMargin={0.2}
+				hexPolygonsTransitionDuration={300}
+				hexPolygonColor={(d) => {
+					switch (d) {
+						case hoveredCountry && selectedCountry:
+							return hexColor
+						case selectedCountry:
+							return hexColor
+						default:
+							return hexColor
+					}
+				}}
+				// hexPolygonAltitude={ polygonAltitude}
+				// polygonsData={updatedCountries}
 				// polygonAltitude={(d) => {
 				// 	switch (d) {
 				// 		case hoveredCountry && selectedCountry:
@@ -280,11 +303,11 @@ function SimpleGlobe({
 				// polygonCapColor={(d) => {
 				// 	switch (d) {
 				// 		case hoveredCountry && selectedCountry:
-				// 			return "#FFD700"
+				// 			return hexColor
 				// 		case selectedCountry:
-				// 			return "#FFD700"
+				// 			return hexColor
 				// 		default:
-				// 			return "#FFD700"
+				// 			return hexColor
 				// 	}
 				// }}
 				// polygonSideColor={(d) => {
@@ -295,16 +318,6 @@ function SimpleGlobe({
 				// 			return "#fff"
 				// 		default:
 				// 			return "transparent"
-				// 	}
-				// }}
-				// polygonStrokeColor={(d) => {
-				// 	switch (d) {
-				// 		case hoveredCountry && selectedCountry:
-				// 			return "#fff"
-				// 		case selectedCountry:
-				// 			return "#fff"
-				// 		default:
-				// 			return "#fff"
 				// 	}
 				// }}
 				// onPolygonHover={handleCountryHover}

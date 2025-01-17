@@ -111,24 +111,31 @@ function App() {
 				</Select>
 				{!currentSky && (
 					<div className="flex justify-between">
-						<p className="mr-2">Color</p>
+						<p className="mr-2 text-sm">
+							Color <span className="text-xs">{color}</span>
+						</p>
 						<ColorPicker onChange={setColor} value={color} />
 					</div>
 				)}
 				<div className="flex justify-between">
-					<p className="mr-2">Hex Color</p>
+					<p className="mr-2 text-sm">
+						Hex Color <span className="text-xs">{hexColor}</span>
+					</p>
 					<ColorPicker onChange={setHexColor} value={hexColor} />
 				</div>
 				<div className="flex justify-between">
-					<p className="mr-2">Marker Color</p>
+					<p className="mr-2 text-sm">
+						Marker Color <span className="text-xs">{markerColor}</span>
+					</p>
 					<ColorPicker onChange={setMarkerColor} value={markerColor} />
 				</div>
 
-				<div className="grid w-full max-w-sm items-center gap-1.5">
+				<div className="grid w-full max-w-xs items-center gap-1.5">
 					<Label htmlFor="picture">Marker Size</Label>
 					<Input
 						type="number"
 						value={markerSize}
+						className="w-36"
 						onChange={(e) => setMarkerSize(Number(e.target.value))}
 					/>
 				</div>
