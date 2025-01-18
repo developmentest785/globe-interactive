@@ -3,7 +3,7 @@ import { useThree } from "@react-three/fiber"
 
 export function hexToRgb(hex: string) {
 	const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
-	hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+	hex = hex.replace(shorthandRegex, function (_m, r, g, b) {
 		return r + r + g + g + b + b
 	})
 
