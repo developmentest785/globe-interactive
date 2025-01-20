@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react"
 import { mockAlumni } from "@/data/mockAlumni"
 import { Feature } from "geojson"
-import Globe from "react-globe.gl"
 import type { GlobeMethods } from "react-globe.gl"
+import Globe from "react-globe.gl"
 import * as THREE from "three"
 
 import { cn } from "@/lib/utils"
