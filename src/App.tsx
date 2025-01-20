@@ -54,11 +54,10 @@ function App() {
 	const [markerColor, setMarkerColor] = useState<string>("#b03c3c")
 	const [markerSize, setMarkerSize] = useState<number>(20)
 	const [selectedPreset, setSelectedPreset] = useState<number>(0)
-	const [isOpen, setIsOpen] = useState<boolean>(true)
+	const [isOpen, setIsOpen] = useState<boolean>(false)
 
 	const { selectedCity, setHoveredCity, setSelectedCity } = useCountryPicker()
 	const presets: Preset[] = [
-		// generate few presets using the values
 		{
 			name: "Preset 1",
 			sky: 0,
@@ -73,8 +72,26 @@ function App() {
 			sky: 1,
 			background: 1,
 			color: "#0f0f0f",
-			hexColor: "#0f0f0f",
-			markerColor: "#b03c3c",
+			hexColor: "#d2d2d2",
+			markerColor: "#ff0909",
+			markerSize: 20,
+		},
+		{
+			name: "Preset 3",
+			sky: 2,
+			background: 3,
+			color: "#0f0f0f",
+			hexColor: "#044949",
+			markerColor: "#ff6a6a",
+			markerSize: 20,
+		},
+		{
+			name: "Preset 4",
+			sky: 1,
+			background: 0,
+			color: "#0f0f0f",
+			hexColor: "#ff6a6a",
+			markerColor: "#ff0909",
 			markerSize: 20,
 		},
 	]
@@ -200,49 +217,49 @@ function App() {
 								onChange={(e) => setMarkerSize(Number(e.target.value))}
 							/>
 						</div>
-						<div className="flex flex-col gap-1">
-							<Label htmlFor="sky" className="text-sm">
-								Preset
-							</Label>
-							<Select
-								defaultValue={selectedPreset.toString()}
-								onValueChange={(value) => {
-									setCurrentSky(presets[Number(value)].sky)
-									setCurrentBackground(presets[Number(value)].background)
-									setColor(presets[Number(value)].color)
-									setHexColor(presets[Number(value)].hexColor)
-									setMarkerColor(presets[Number(value)].markerColor)
-									setMarkerSize(presets[Number(value)].markerSize)
-									setSelectedPreset(Number(value))
-								}}
-							>
-								<SelectTrigger className="w-44">
-									<SelectValue placeholder="selected Preset" />
-								</SelectTrigger>
-								<SelectContent>
-									<SelectGroup>
-										<SelectLabel>Skys</SelectLabel>
-										{presets.map((preset, index) => (
-											<SelectItem key={index} value={index.toString()}>
-												{preset.name}
-											</SelectItem>
-										))}
-									</SelectGroup>
-								</SelectContent>
-							</Select>
-						</div>
-						{selectedCity && (
-							<div className="flex flex-col gap-1">
-								<h3 className="text-xs font-bold">Selected City</h3>
-								<p className="text-sm">
-									{selectedCity.properties?.name},{" "}
-									{selectedCity.properties?.adm0name}
-								</p>
-							</div>
-						)}
 					</CollapsibleContent>
 				</Collapsible>
 
+				<div className="flex flex-col gap-1">
+					<Label htmlFor="sky" className="text-sm">
+						Preset
+					</Label>
+					<Select
+						defaultValue={selectedPreset.toString()}
+						onValueChange={(value) => {
+							setCurrentSky(presets[Number(value)].sky)
+							setCurrentBackground(presets[Number(value)].background)
+							setColor(presets[Number(value)].color)
+							setHexColor(presets[Number(value)].hexColor)
+							setMarkerColor(presets[Number(value)].markerColor)
+							setMarkerSize(presets[Number(value)].markerSize)
+							setSelectedPreset(Number(value))
+						}}
+					>
+						<SelectTrigger className="w-44">
+							<SelectValue placeholder="selected Preset" />
+						</SelectTrigger>
+						<SelectContent>
+							<SelectGroup>
+								<SelectLabel>Skys</SelectLabel>
+								{presets.map((preset, index) => (
+									<SelectItem key={index} value={index.toString()}>
+										{preset.name}
+									</SelectItem>
+								))}
+							</SelectGroup>
+						</SelectContent>
+					</Select>
+				</div>
+				{selectedCity && (
+					<div className="flex flex-col gap-1">
+						<h3 className="text-xs font-bold">Selected City</h3>
+						<p className="text-sm">
+							{selectedCity.properties?.name},{" "}
+							{selectedCity.properties?.adm0name}
+						</p>
+					</div>
+				)}
 				<pre>
 					<code className="whitespace-pre-wrap text-xs text-gray-500">
 						{JSON.stringify(

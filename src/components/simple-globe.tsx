@@ -63,7 +63,7 @@ function SimpleGlobe({
 			const directionalLight = globe
 				.lights()
 				.find((obj3d) => obj3d.type === "DirectionalLight")
-			// GlobeMethods.lights(): Light[] (+1 overload
+
 			if (directionalLight) {
 				directionalLight.position.set(0, 250, 150)
 				directionalLight.intensity = 15
@@ -324,8 +324,9 @@ function SimpleGlobe({
 				hexPolygonResolution={3}
 				hexPolygonMargin={0.2}
 				hexPolygonUseDots={false}
-				hexBinPointWeight={3}
-				hexBinResolution={2}
+				onHexPolygonHover={(d) => {
+					console.log(d)
+				}}
 				hexMargin={0.2}
 				hexPolygonsTransitionDuration={300}
 				hexPolygonColor={(d) => {
