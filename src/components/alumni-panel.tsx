@@ -4,24 +4,26 @@ import type { Feature } from "geojson"
 import { Linkedin, X } from "lucide-react"
 
 interface AlumniPanelProps {
-	country: Feature | null
+	city: Feature | null
 	alumni: Alumni[]
 	onClose: () => void
 }
 
 export default function AlumniPanel({
-	country,
+	city,
 	alumni,
 	onClose,
 }: AlumniPanelProps) {
-	if (!country) return null
+	if (!city) return null
 
-	const countryName = country.properties?.ISO_A2
-	if (!countryName) return null
+	const cityName = city.properties?.name
+	if (!cityName) return null
 
-	const countryFullName = country.properties?.NAME
+	const countryFullName = city.properties?.adm0name
 
-	const countryAlumni = alumni.filter((a) => a.country === countryName)
+	const countryAlumni = alumni.filter(
+		(a) => a.city.toLowerCase() === cityName.toLowerCase()
+	)
 	if (countryAlumni.length === 0) return null
 
 	return (

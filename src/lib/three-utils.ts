@@ -1,6 +1,3 @@
-import { useEffect } from "react"
-import { useThree } from "@react-three/fiber"
-
 export function hexToRgb(hex: string) {
 	const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
 	hex = hex.replace(shorthandRegex, function (_m, r, g, b) {
@@ -25,16 +22,4 @@ export function genRandomNumbers(min: number, max: number, count: number) {
 	}
 
 	return arr
-}
-
-export function WebGLRendererConfig() {
-	const { gl, size } = useThree()
-
-	useEffect(() => {
-		gl.setPixelRatio(window.devicePixelRatio)
-		gl.setSize(size.width, size.height)
-		gl.setClearColor(0xffaaff, 0)
-	}, [gl, size.height, size.width])
-
-	return null
 }

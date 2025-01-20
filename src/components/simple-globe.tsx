@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react"
 import { mockAlumni } from "@/data/mockAlumni"
 import { Feature } from "geojson"
 import Globe from "react-globe.gl"
-// import type { GlobeMethods, GlobeProps } from "react-globe.gl"
 import type { GlobeMethods } from "react-globe.gl"
 import * as THREE from "three"
 
@@ -31,15 +30,23 @@ function SimpleGlobe({
 	hexColor,
 }: SimpleGlobeProps) {
 	const globeRef = useRef<GlobeMethods | undefined>(undefined)
-	const { countries, cities } = useCountryPicker()
-	const { width, height } = useViewport()
 	const {
+		countries,
+		cities,
 		selectedCountry,
 		setSelectedCountry,
-		hoveredCountry,
-		// setHoveredCountry,
+		selectedCity,
+		setSelectedCity,
 	} = useCountryPicker()
-	const [hoveredEarth, setHoveredEarth] = useState<boolean>(false)
+	const { width, height } = useViewport()
+
+	const INIT_GLOBE = {
+		lat: 0,
+		lng: 0,
+		altitude: 3.4,
+		selectedAltitude: 1.5,
+		animDuration: 1500,
+	}
 
 	const markerSvg = `<svg style="color: ${markerColor}" viewBox="-4 0 36 36">
 	  <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
@@ -83,7 +90,9 @@ function SimpleGlobe({
 			})
 		}
 	}
-	const htmlElement = () => {
+
+	const createMarkerElement = (d: Object) => {
+		const data = d as Feature
 		const el = document.createElement("div") as HTMLDivElement
 		el.innerHTML = markerSvg
 		el.style.color = markerColor
@@ -93,20 +102,47 @@ function SimpleGlobe({
 		el.style["pointer-events"] = "auto"
 		el.style.cursor = "pointer"
 		el.onclick = () => {
-			console.log("clicked marker")
-			if (globeRef.current) {
-				globeRef.current.pointOfView(
-					{
-						altitude: 1.5,
-						lat: 0,
-						lng: 0,
-					},
-					1500
-				)
-			}
-			setHoveredEarth(hoveredEarth ? false : true)
+			handleCityClick(data)
+		}
+		el.onmouseenter = () => {
+			handleCityMouseEnter(data)
+		}
+		el.onmouseleave = () => {
+			handleCityMouseLeave(data)
 		}
 		return el
+	}
+
+	const handleCityClick = (d: Feature) => {
+		console.log("clicked marker", d)
+		if (globeRef.current) {
+			setSelectedCity(d as Feature)
+			console.log("selected city", d.properties?.name)
+			globeRef.current.controls().autoRotate = false
+			globeRef.current.pointOfView(
+				{
+					altitude: INIT_GLOBE.selectedAltitude,
+					lng: d.properties?.longitude,
+					lat: d.properties?.latitude,
+				},
+				INIT_GLOBE.animDuration
+			)
+		}
+		return null
+	}
+
+	const handleCityMouseEnter = (d: object) => {
+		if (globeRef.current) {
+			console.log("hovered city", d)
+			globeRef.current.controls().autoRotate = false
+		}
+	}
+
+	const handleCityMouseLeave = (d: object) => {
+		if (globeRef.current && !selectedCity) {
+			console.log("left city", d)
+			globeRef.current.controls().autoRotate = true
+		}
 	}
 
 	const updatedCities = cities?.features
@@ -126,6 +162,21 @@ function SimpleGlobe({
 			return null
 		})
 		.filter((country) => country !== null) as Feature[]
+
+	useEffect(() => {
+		if (!globeRef?.current) return
+		if (globeRef?.current && !selectedCity) {
+			console.log("reset globe")
+			globeRef.current.controls().autoRotate = true
+			globeRef.current.pointOfView(
+				{
+					lat: 0,
+					altitude: INIT_GLOBE.altitude,
+				},
+				INIT_GLOBE.animDuration
+			)
+		}
+	}, [selectedCity, globeRef])
 
 	// const handleCountryHover: GlobeProps["onPolygonHover"] = (d) => {
 	// 	if (d) {
@@ -165,7 +216,7 @@ function SimpleGlobe({
 	// 						lng: lng,
 	// 						lat: lat,
 	// 					},
-	// 					1500
+	// 					INIT_GLOBE.animDuration
 	// 				)
 	// 			}
 	// 		} else {
@@ -181,7 +232,7 @@ function SimpleGlobe({
 	// 							feature.bbox &&
 	// 							feature.bbox[1] + (feature.bbox[3] - feature.bbox[1]) / 2,
 	// 					},
-	// 					1500
+	// 					INIT_GLOBE.animDuration
 	// 				)
 	// 			}
 	// 		}
@@ -198,31 +249,31 @@ function SimpleGlobe({
 	// 					lat: 0,
 	// 					altitude: 3.4,
 	// 				},
-	// 				1500
+	// 				INIT_GLOBE.animDuration
 	// 			)
 	// 			setSelectedCountry(null)
 	// 		}
 	// 	}
 	// }
 
-	useEffect(() => {
-		if (!globeRef?.current) return
-		const resetGlobe = setTimeout(() => {
-			if (hoveredEarth && selectedCountry) return
-			if (globeRef?.current) {
-				console.log("reset globe")
-				globeRef.current.controls().autoRotate = true
-				globeRef.current.pointOfView(
-					{
-						lat: 0,
-						altitude: 3.4,
-					},
-					1500
-				)
-			}
-		}, 5000)
-		return () => clearTimeout(resetGlobe)
-	}, [hoveredEarth, selectedCountry, globeRef])
+	// useEffect(() => {
+	// 	if (!globeRef?.current) return
+	// 	const resetGlobe = setTimeout(() => {
+	// 		if (hoveredEarth && selectedCountry) return
+	// 		if (globeRef?.current) {
+	// 			console.log("reset globe")
+	// 			globeRef.current.controls().autoRotate = true
+	// 			globeRef.current.pointOfView(
+	// 				{
+	// 					lat: 0,
+	// 					altitude: 3.4,
+	// 				},
+	// 				INIT_GLOBE.animDuration
+	// 			)
+	// 		}
+	// 	}, 5000)
+	// 	return () => clearTimeout(resetGlobe)
+	// }, [hoveredEarth, selectedCountry, globeRef])
 
 	// useEffect(() => {
 	// 	if (!globeRef?.current) return
@@ -238,7 +289,7 @@ function SimpleGlobe({
 	// 				lat: 0,
 	// 				altitude: 3.4,
 	// 			},
-	// 			1500
+	// 			INIT_GLOBE.animDuration
 	// 		)
 	// 	}
 	// }, [selectedCountry, globeRef])
@@ -279,8 +330,6 @@ function SimpleGlobe({
 				hexPolygonsTransitionDuration={300}
 				hexPolygonColor={(d) => {
 					switch (d) {
-						case hoveredCountry && selectedCountry:
-							return hexColor
 						case selectedCountry:
 							return hexColor
 						default:
@@ -325,7 +374,7 @@ function SimpleGlobe({
 				onGlobeClick={() => setSelectedCountry(null)}
 				onGlobeReady={onGlobeReady}
 				htmlElementsData={updatedCities}
-				htmlElement={htmlElement}
+				htmlElement={createMarkerElement}
 			/>
 		</div>
 	)
