@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { mockAlumni } from "@/data/mockAlumni"
 import { Feature } from "geojson"
 import Globe from "react-globe.gl"
