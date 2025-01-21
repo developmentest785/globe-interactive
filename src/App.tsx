@@ -146,6 +146,7 @@ function App() {
 							</Label>
 							<Select
 								name="background"
+								value={currentBackground.toString()}
 								defaultValue={currentBackground.toString()}
 								onValueChange={(value) => setCurrentBackground(Number(value))}
 							>
@@ -169,6 +170,7 @@ function App() {
 								Sky
 							</Label>
 							<Select
+								value={currentSky.toString()}
 								defaultValue={currentSky.toString()}
 								onValueChange={(value) => setCurrentSky(Number(value))}
 							>
@@ -225,6 +227,7 @@ function App() {
 						Preset
 					</Label>
 					<Select
+						value={selectedPreset.toString()}
 						defaultValue={selectedPreset.toString()}
 						onValueChange={(value) => {
 							setCurrentSky(presets[Number(value)].sky)
