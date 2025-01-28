@@ -1,2 +1,16 @@
 [tools]
 node = "latest"
+
+[hooks]
+postinstall = 'npx corepack enable'
+
+[tasks.pnpm-install]
+description = "Install dependencies using pnpm"
+run = "pnpm install"
+sources = ['pnpm-lock.yaml', 'package.json', 'mise.toml']
+outputs = ['node_modules/.pnpm/lock.yaml']
+
+[tasks.dev]
+description = "Calls your dev script in `package.json`"
+run = ["node --run dev"]
+depends = ["pnpm-install"]
