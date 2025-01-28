@@ -59,7 +59,7 @@ export default function AlumniPanel({
 					{countryAlumni.map((alumnus) => (
 						<div
 							key={alumnus.id}
-							className="rounded-lg bg-gray-50 p-2 shadow-sm transition-shadow hover:shadow-md"
+							className="rounded-lg bg-gray-50 p-2 shadow-xs transition-shadow hover:shadow-md"
 						>
 							<img
 								src={alumnus.imageUrl}
