@@ -166,6 +166,17 @@ function SimpleGlobe({
 		})
 		.filter((country) => country !== null) as Feature[]
 
+	const cityName = new Set(
+		cities?.features.map((city) => city.properties?.name.toLowerCase())
+	)
+
+	for (let index = 0; index < mockAlumni.length; index++) {
+		const alumni = mockAlumni[index]
+		if (!cityName.has(alumni.address.split(",")[0].toLowerCase())) {
+			console.log("city not found", alumni.address.split(",")[0])
+		}
+	}
+
 	useEffect(() => {
 		if (!globeRef?.current) return
 		if (globeRef?.current && !selectedCity) {
