@@ -126,7 +126,11 @@ function App() {
 			style={{ backgroundColor: color }}
 		>
 			<div className="fixed left-4 top-4 z-10 flex max-w-52 flex-col gap-2 rounded-sm bg-white p-4 text-black">
-				<button onClick={handleFullScreen} className="h-10 w-10 self-end">
+				<button
+					type="button"
+					onClick={handleFullScreen}
+					className="h-10 w-10 self-end"
+				>
 					{isFullScreen ? <Shrink size={32} /> : <Maximize size={32} />}
 				</button>
 				<Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-50">
@@ -157,6 +161,7 @@ function App() {
 									<SelectGroup>
 										<SelectLabel>Backgrounds</SelectLabel>
 										{backgrounds.map((bg, index) => (
+											// biome-ignore lint: not unique
 											<SelectItem key={index} value={index.toString()}>
 												{bg.name}
 											</SelectItem>
@@ -181,6 +186,7 @@ function App() {
 									<SelectGroup>
 										<SelectLabel>Skys</SelectLabel>
 										{skys.map((sky, index) => (
+											// biome-ignore lint: not unique
 											<SelectItem key={index} value={index.toString()}>
 												{sky.name}
 											</SelectItem>
@@ -246,6 +252,7 @@ function App() {
 							<SelectGroup>
 								<SelectLabel>Skys</SelectLabel>
 								{presets.map((preset, index) => (
+									// biome-ignore lint: not unique
 									<SelectItem key={index} value={index.toString()}>
 										{preset.name}
 									</SelectItem>

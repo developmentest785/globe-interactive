@@ -21,9 +21,10 @@ export default function AlumniPanel({
 
 	const countryFullName = city.properties?.adm0name
 
-	const countryAlumni = alumni.filter(
-		(a) => a.city.toLowerCase() === cityName.toLowerCase()
-	)
+	const countryAlumni = alumni.filter((a) => {
+		const cityAlumni = a.address.split(",")[0]
+		return cityAlumni.toLowerCase() === cityName.toLowerCase()
+	})
 	if (countryAlumni.length === 0) return null
 
 	return (
@@ -41,6 +42,7 @@ export default function AlumniPanel({
 							{`${countryFullName}${countryAlumni.length ? "'s" : ""}`} Alumni
 						</h2>
 						<button
+							type="button"
 							onClick={onClose}
 							className="absolute right-0 top-2 rounded-full p-2 transition-colors hover:bg-gray-100"
 							aria-label="Close panel"
@@ -58,24 +60,26 @@ export default function AlumniPanel({
 				<div className="space-y-6">
 					{countryAlumni.map((alumnus) => (
 						<div
-							key={alumnus.id}
+							key={`${alumnus.first} ${alumnus.last} - ${alumnus.title} -${alumnus.gradYear}`}
 							className="rounded-lg bg-gray-50 p-2 shadow-xs transition-shadow hover:shadow-md"
 						>
-							<img
-								src={alumnus.imageUrl}
-								alt={alumnus.name}
-								className="mb-4 h-32 w-32 rounded-full object-cover"
-							/>
+							{alumnus.imageUrl && (
+								<img
+									src={alumnus.imageUrl}
+									alt={alumnus.first}
+									className="mb-4 h-32 w-32 rounded-full object-cover"
+								/>
+							)}
 							<div className="flex items-start space-x-4">
 								<div className="flex-1">
 									<h3 className="font-semibold text-gray-800">
-										{alumnus.name}
+										{alumnus.first} {alumnus.last}
 									</h3>
-									<p className="text-lg text-gray-600">{alumnus.role}</p>
+									<p className="text-lg text-gray-600">{alumnus.title}</p>
 									<p className="text-lg text-gray-600">{alumnus.company}</p>
 									<div className="mt-2 flex items-center space-x-2">
 										<span className="text-lg text-gray-500">
-											Class of {alumnus.graduationYear}
+											Class of {alumnus.gradYear}
 										</span>
 										{alumnus.linkedIn && (
 											<a
@@ -83,7 +87,7 @@ export default function AlumniPanel({
 												target="_blank"
 												rel="noopener noreferrer"
 												className="text-blue-600 hover:text-blue-700"
-												aria-label={`Visit ${alumnus.name}'s LinkedIn profile`}
+												aria-label={`Visit ${alumnus.first}'s LinkedIn profile`}
 											>
 												<Linkedin className="h-4 w-4" />
 											</a>

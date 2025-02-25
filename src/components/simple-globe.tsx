@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import { mockAlumni } from "@/data/mockAlumni"
-import { Feature } from "geojson"
+import type { Feature } from "geojson"
 import type { GlobeMethods } from "react-globe.gl"
 import Globe from "react-globe.gl"
 import * as THREE from "three"
@@ -80,7 +80,10 @@ function SimpleGlobe({
 						75,
 						75
 					),
-					new THREE.MeshPhongMaterial({ map: cloudsTexture, transparent: true })
+					new THREE.MeshPhongMaterial({
+						map: cloudsTexture,
+						transparent: true,
+					})
 				)
 				globe.scene().add(clouds)
 				;(function rotateClouds() {
@@ -147,10 +150,10 @@ function SimpleGlobe({
 
 	const updatedCities = cities?.features
 		.map((city) => {
-			const alumni = mockAlumni.filter(
-				(alumnus) =>
-					alumnus.city.toLowerCase() === city.properties?.name.toLowerCase()
-			)
+			const alumni = mockAlumni.filter((alumnis) => {
+				const cityAlumni = alumnis.address.split(",")[0]
+				return cityAlumni.toLowerCase() === city.properties?.name.toLowerCase()
+			})
 			if (alumni.length > 0) {
 				return {
 					...city,
@@ -176,7 +179,7 @@ function SimpleGlobe({
 				INIT_GLOBE.animDuration
 			)
 		}
-	}, [selectedCity, globeRef])
+	}, [selectedCity])
 
 	// const handleCountryHover: GlobeProps["onPolygonHover"] = (d) => {
 	// 	if (d) {
