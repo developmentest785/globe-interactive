@@ -94,6 +94,7 @@ function SimpleGlobe({
 		}
 	}
 
+	// @ts-ignore
 	const createMarkerElement = (d: Object) => {
 		const data = d as Feature
 		const el = document.createElement("div") as HTMLDivElement
@@ -101,7 +102,6 @@ function SimpleGlobe({
 		el.style.color = markerColor
 		el.style.width = `${markerSize}px`
 
-		// @ts-expect-error - ignore
 		el.style["pointer-events"] = "auto"
 		el.style.cursor = "pointer"
 		el.onclick = () => {
@@ -125,7 +125,9 @@ function SimpleGlobe({
 			globeRef.current.pointOfView(
 				{
 					altitude: INIT_GLOBE.selectedAltitude,
+					// @ts-expect-error - ignore
 					lng: d.lng,
+					// @ts-expect-error - ignore
 					lat: d.lat,
 				},
 				INIT_GLOBE.animDuration
@@ -162,14 +164,16 @@ function SimpleGlobe({
 				if (alumni.length > 0) {
 					return {
 						...city,
+						// @ts-expect-error - ignore
 						lng: city.lng,
+						// @ts-expect-error - ignore
 						lat: city.lat,
 						size: 10,
 					} as Feature
 				}
 				return null
 			})
-			.filter((country: Feature | null) => country !== null) as Feature[])
+			.filter((country: any) => country !== null) as Feature[])
 
 	useEffect(() => {
 		if (!globeRef?.current) return

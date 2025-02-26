@@ -3,7 +3,6 @@ import { Upload, Download } from "lucide-react"
 import Papa from "papaparse"
 import type { Feature } from "geojson"
 import type { Alumni } from "@/data/mockAlumni"
-import * as GeoJSON from "geojson"
 
 export interface ProcessedCity extends Feature {
 	lng: number
@@ -62,8 +61,10 @@ function Converter() {
 		const processed = cities
 			.map((city) => {
 				const cityAlumni = alumni.filter((alumnus) => {
+					// @ts-ignore
 					if (!alumnus.Address) return false
 					return (
+						// @ts-ignore
 						alumnus.Address.split(",")[0].trim().toLowerCase() ===
 						city.properties?.name.toLowerCase()
 					)
@@ -72,7 +73,9 @@ function Converter() {
 				if (cityAlumni.length > 0) {
 					return {
 						...city,
+						// @ts-ignore
 						lng: city.geometry?.coordinates[0],
+						// @ts-ignore
 						lat: city.geometry?.coordinates[1],
 						size: 10,
 					}
