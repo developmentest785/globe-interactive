@@ -1,11 +1,14 @@
-import { useState } from "react"
 import { mockAlumni } from "@/data/mockAlumni"
 import { AnimatePresence } from "framer-motion"
 import { ChevronsUpDown, Maximize, Shrink } from "lucide-react"
+import { useState } from "react"
 
-import { cn } from "@/lib/utils"
 import { useCountryPicker } from "@/hooks/use-country-picker"
+import { cn } from "@/lib/utils"
 
+import AlumniPanel from "@/components/alumni-panel"
+import SimpleGlobe from "@/components/simple-globe"
+import Converter from "@/components/csv-to-json-converter"
 import { Button } from "@/components/ui/button"
 import {
 	Collapsible,
@@ -24,16 +27,15 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select"
-import AlumniPanel from "@/components/alumni-panel"
-import SimpleGlobe from "@/components/simple-globe"
 
-import sky3 from "@/assets/background_milky_way.jpg"
 import sky1 from "@/assets/background.png"
+import sky3 from "@/assets/background_milky_way.jpg"
 import bg1 from "@/assets/earth-blue-marble.jpg"
 import bg2 from "@/assets/earth-dark.jpg"
 import bg3 from "@/assets/earth-day.jpg"
 import bg4 from "@/assets/earth-night.jpg"
 import sky2 from "@/assets/night-sky.png"
+import { Switch } from "./components/ui/switch"
 
 interface Preset {
 	name: string
@@ -55,6 +57,7 @@ function App() {
 	const [markerSize, setMarkerSize] = useState<number>(20)
 	const [selectedPreset, setSelectedPreset] = useState<number>(0)
 	const [isOpen, setIsOpen] = useState<boolean>(false)
+	const [convertedOpen, setConvertedOpen] = useState<boolean>(false)
 
 	const { selectedCity, setHoveredCity, setSelectedCity } = useCountryPicker()
 	const presets: Preset[] = [
@@ -125,7 +128,7 @@ function App() {
 			className={cn("relative h-screen w-full")}
 			style={{ backgroundColor: color }}
 		>
-			<div className="fixed left-4 top-4 z-10 flex max-w-52 flex-col gap-2 rounded-sm bg-white p-4 text-black">
+			<div className="fixed left-4 top-4 z-10 flex max-w-52 flex-col gap-2 rounded-sm p-4 bg-white text-black">
 				<button
 					type="button"
 					onClick={handleFullScreen}
@@ -227,6 +230,16 @@ function App() {
 						</div>
 					</CollapsibleContent>
 				</Collapsible>
+				<div className="flex items-center justify-between">
+					<Switch
+						id="converter"
+						checked={convertedOpen}
+						onCheckedChange={() => setConvertedOpen(!convertedOpen)}
+					/>
+					<Label htmlFor="converter" className="text-sm">
+						Convert CSV to JSON
+					</Label>
+				</div>
 
 				<div className="flex flex-col gap-1">
 					<Label htmlFor="sky" className="text-sm">
@@ -263,7 +276,7 @@ function App() {
 				</div>
 				{selectedCity && (
 					<div className="flex flex-col gap-1">
-						<h3 className="text-xs font-bold">Selected City</h3>
+						<h3 className="font-bold text-xs">Selected City</h3>
 						<p className="text-sm">
 							{selectedCity.properties?.name},{" "}
 							{selectedCity.properties?.adm0name}
@@ -271,7 +284,7 @@ function App() {
 					</div>
 				)}
 				<pre>
-					<code className="whitespace-pre-wrap text-xs text-gray-500">
+					<code className="whitespace-pre-wrap text-gray-500 text-xs">
 						{JSON.stringify(
 							{
 								currentBackground,
@@ -289,14 +302,18 @@ function App() {
 			</div>
 
 			<div className="absolute inset-0">
-				<SimpleGlobe
-					background={skys[currentSky].value}
-					backgroundColor={color}
-					globeImg={backgrounds[currentBackground].value}
-					hexColor={hexColor}
-					markerColor={markerColor}
-					markerSize={markerSize}
-				/>
+				{convertedOpen ? (
+					<Converter />
+				) : (
+					<SimpleGlobe
+						background={skys[currentSky].value}
+						backgroundColor={color}
+						globeImg={backgrounds[currentBackground].value}
+						hexColor={hexColor}
+						markerColor={markerColor}
+						markerSize={markerSize}
+					/>
+				)}
 			</div>
 
 			{selectedCity?.properties?.name && (

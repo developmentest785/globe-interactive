@@ -1,12 +1,12 @@
 import {
 	createContext,
-	ReactNode,
 	useContext,
 	useEffect,
 	useState,
+	type ReactNode,
 } from "react"
 import globeData from "@/data/globe.geo.json"
-import citiesData from "@/data/ne_10m_populated_places_simple.geo.json"
+import citiesData from "@/data/processed-cities.geo.json"
 import type { Feature, FeatureCollection } from "geojson"
 
 interface CountryPickerContextProps {
@@ -15,7 +15,7 @@ interface CountryPickerContextProps {
 	setSelectedCountry: (country: Feature | null) => void
 	hoveredCountry: Feature | null
 	setHoveredCountry: (country: Feature | null) => void
-	cities: FeatureCollection | null
+	cities: Feature[] | null
 	selectedCity: Feature | null
 	setSelectedCity: (city: Feature | null) => void
 	hoveredCity: Feature | null
@@ -34,13 +34,13 @@ export const CountryPickerProvider = ({
 	const [countries, setCountries] = useState<FeatureCollection | null>(null)
 	const [selectedCountry, setSelectedCountry] = useState<Feature | null>(null)
 	const [hoveredCountry, setHoveredCountry] = useState<Feature | null>(null)
-	const [cities, setCities] = useState<FeatureCollection | null>(null)
+	const [cities, setCities] = useState<Feature[] | null>(null)
 	const [hoveredCity, setHoveredCity] = useState<Feature | null>(null)
 	const [selectedCity, setSelectedCity] = useState<Feature | null>(null)
 
 	useEffect(() => {
 		setCountries(globeData as unknown as FeatureCollection)
-		setCities(citiesData as unknown as FeatureCollection)
+		setCities(citiesData as unknown as Feature[])
 	}, [])
 
 	return (

@@ -44,7 +44,7 @@ function SimpleGlobe({
 		lat: 0,
 		lng: 0,
 		altitude: 3.4,
-		selectedAltitude: 1.5,
+		selectedAltitude: 0.5,
 		animDuration: 1500,
 	}
 
@@ -125,8 +125,8 @@ function SimpleGlobe({
 			globeRef.current.pointOfView(
 				{
 					altitude: INIT_GLOBE.selectedAltitude,
-					lng: d.properties?.longitude,
-					lat: d.properties?.latitude,
+					lng: d.lng,
+					lat: d.lat,
 				},
 				INIT_GLOBE.animDuration
 			)
@@ -136,46 +136,40 @@ function SimpleGlobe({
 
 	const handleCityMouseEnter = (d: object) => {
 		if (globeRef.current) {
-			console.log("hovered city", d)
 			globeRef.current.controls().autoRotate = false
 		}
 	}
 
 	const handleCityMouseLeave = (d: object) => {
 		if (globeRef.current && !selectedCity) {
-			console.log("left city", d)
 			globeRef.current.controls().autoRotate = true
 		}
 	}
 
-	const updatedCities = cities?.features
-		.map((city) => {
-			const alumni = mockAlumni.filter((alumnis) => {
-				const cityAlumni = alumnis.address.split(",")[0]
-				return cityAlumni.toLowerCase() === city.properties?.name.toLowerCase()
-			})
-			if (alumni.length > 0) {
-				return {
-					...city,
-					lng: city.properties?.longitude,
-					lat: city.properties?.latitude,
-					size: 10,
+	const updatedCities =
+		cities &&
+		(cities
+			.map((city) => {
+				const alumni = mockAlumni.filter((alumnis) => {
+					const cityAlumni = alumnis.address.split(",")[0]
+					return (
+						cityAlumni.toLowerCase() === city.properties?.name.toLowerCase() &&
+						city.properties?.admin1_code &&
+						city.properties?.admin1_code ===
+							alumnis.address.split(",")[1].trim()
+					)
+				})
+				if (alumni.length > 0) {
+					return {
+						...city,
+						lng: city.lng,
+						lat: city.lat,
+						size: 10,
+					} as Feature
 				}
-			}
-			return null
-		})
-		.filter((country) => country !== null) as Feature[]
-
-	const cityName = new Set(
-		cities?.features.map((city) => city.properties?.name.toLowerCase())
-	)
-
-	for (let index = 0; index < mockAlumni.length; index++) {
-		const alumni = mockAlumni[index]
-		if (!cityName.has(alumni.address.split(",")[0].toLowerCase())) {
-			console.log("city not found", alumni.address.split(",")[0])
-		}
-	}
+				return null
+			})
+			.filter((country: Feature | null) => country !== null) as Feature[])
 
 	useEffect(() => {
 		if (!globeRef?.current) return

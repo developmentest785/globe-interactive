@@ -1,0 +1,4311 @@
+[
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -86.02637,
+        36.52116
+      ]
+    },
+    "properties": {
+      "geoname_id": "4635093",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": [
+        "La Fayette",
+        "Lafajet",
+        "Lafayette",
+        "Lafejet",
+        "lafayyt",
+        "lfyt  tnsy",
+        "Лафайет",
+        "Лафејет",
+        "لافاييت",
+        "لافیت، ٹینیسی",
+        "لفیت، تنسی"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TN",
+      "admin2_code": "111",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 4991,
+      "elevation": "292",
+      "dem": 292,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -86.02637,
+    "lat": 36.52116,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -85.098,
+        33.27762
+      ]
+    },
+    "properties": {
+      "geoname_id": "4196083",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Франклин"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "GA",
+      "admin2_code": "149",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 969,
+      "elevation": "202",
+      "dem": 204,
+      "timezone": "America/New_York",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -85.098,
+    "lat": 33.27762,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -87.15,
+        15.6
+      ]
+    },
+    "properties": {
+      "geoname_id": "3602473",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "HN",
+      "cou_name_en": "Honduras",
+      "country_code_2": null,
+      "admin1_code": "01",
+      "admin2_code": null,
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1151,
+      "elevation": null,
+      "dem": 98,
+      "timezone": "America/Tegucigalpa",
+      "modification_date": "2006-01-17",
+      "label_en": "Honduras"
+    },
+    "lng": -87.15,
+    "lat": 15.6,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.60746,
+        -33.59473
+      ]
+    },
+    "properties": {
+      "geoname_id": "3872395",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "QTN",
+        "San Antonio",
+        "San-Antonio",
+        "sheng an dong ni ao",
+        "Сан Антонио",
+        "Сан-Антонио",
+        "聖安東尼奧"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "CL",
+      "cou_name_en": "Chile",
+      "country_code_2": null,
+      "admin1_code": "01",
+      "admin2_code": "56",
+      "admin3_code": "05601",
+      "admin4_code": null,
+      "population": 85651,
+      "elevation": null,
+      "dem": 39,
+      "timezone": "America/Santiago",
+      "modification_date": "2023-04-30",
+      "label_en": "Chile"
+    },
+    "lng": -71.60746,
+    "lat": -33.59473,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -98.49363,
+        29.42412
+      ]
+    },
+    "properties": {
+      "geoname_id": "4726206",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "SAT",
+        "San Antonijus",
+        "San Antonio",
+        "San Antonio (Texas)",
+        "San Antonio de Bejar",
+        "San Antoniyo",
+        "San Antònio",
+        "San-Antonia",
+        "San-Antonio",
+        "Sanantonio",
+        "Sanctus Antonius",
+        "can antoniyo",
+        "saen-antonio",
+        "saina entoniyo",
+        "san antoniyo",
+        "san antwnyw",
+        "san'antonio",
+        "san-antʼonio",
+        "sana antoni'o",
+        "sena amtoniyo",
+        "sheng an dong ni ao",
+        "Σαν Αντόνιο",
+        "Сан Антонио",
+        "Сан-Антонио",
+        "Сан-Антоніа",
+        "Сан-Антоніо",
+        "Սան Անտոնիո",
+        "סאן אנטאניא",
+        "סן אנטוניו",
+        "سان آنتونیو",
+        "سان أنطونيو",
+        "سان انٹونیو",
+        "सॅन अँटोनियो",
+        "सैन एन्टोनियो",
+        "স্যান অ্যান্টোনিও",
+        "ਸਾਨ ਆਂਤੋਨੀਓ",
+        "சான் அந்தோனியோ",
+        "శాన్ అంటోనియో",
+        "സാൻ അന്റോണിയോ",
+        "แซนแอนโทนีโอ",
+        "სან-ანტონიო",
+        "サンアントニオ",
+        "圣安东尼奥",
+        "聖安東尼奧",
+        "샌안토니오"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TX",
+      "admin2_code": "029",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1434625,
+      "elevation": "198",
+      "dem": 202,
+      "timezone": "America/Chicago",
+      "modification_date": "2022-08-24",
+      "label_en": "United States"
+    },
+    "lng": -98.49363,
+    "lat": 29.42412,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -72.62305,
+        -14.16967
+      ]
+    },
+    "properties": {
+      "geoname_id": "3948949",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "PE",
+      "cou_name_en": "Peru",
+      "country_code_2": null,
+      "admin1_code": "03",
+      "admin2_code": "0307",
+      "admin3_code": "030709",
+      "admin4_code": null,
+      "population": 314,
+      "elevation": null,
+      "dem": 3452,
+      "timezone": "America/Lima",
+      "modification_date": "2020-05-07",
+      "label_en": "Peru"
+    },
+    "lng": -72.62305,
+    "lat": -14.16967,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        125.73972,
+        7.12
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690402",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "11",
+      "admin2_code": "I7",
+      "admin3_code": "112317000",
+      "admin4_code": null,
+      "population": 2356,
+      "elevation": null,
+      "dem": 230,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 125.73972,
+    "lat": 7.12,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -101.26806,
+        19.66722
+      ]
+    },
+    "properties": {
+      "geoname_id": "8858323",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "MX",
+      "cou_name_en": "Mexico",
+      "country_code_2": null,
+      "admin1_code": "16",
+      "admin2_code": "053",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 3890,
+      "elevation": null,
+      "dem": 1911,
+      "timezone": "America/Mexico_City",
+      "modification_date": "2014-04-11",
+      "label_en": "Mexico"
+    },
+    "lng": -101.26806,
+    "lat": 19.66722,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -149.81806,
+        61.63028
+      ]
+    },
+    "properties": {
+      "geoname_id": "5864312",
+      "name": "Houston",
+      "ascii_name": "Houston",
+      "alternate_names": [
+        "Houston",
+        "Houston Siding",
+        "Kh'juston",
+        "Хьюстон"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "AK",
+      "admin2_code": "170",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 2206,
+      "elevation": "76",
+      "dem": 75,
+      "timezone": "America/Anchorage",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -149.81806,
+    "lat": 61.63028,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -63.72535,
+        10.11914
+      ]
+    },
+    "properties": {
+      "geoname_id": "3628619",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio",
+        "San Antonio de Maturin",
+        "San Antonio de Maturín"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "VE",
+      "cou_name_en": "Venezuela, Bolivarian Rep. of",
+      "country_code_2": null,
+      "admin1_code": "16",
+      "admin2_code": "1601",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 12522,
+      "elevation": null,
+      "dem": 474,
+      "timezone": "America/Caracas",
+      "modification_date": "2023-05-13",
+      "label_en": "Venezuela, Bolivarian Rep. of"
+    },
+    "lng": -63.72535,
+    "lat": 10.11914,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -122.08385,
+        37.38605
+      ]
+    },
+    "properties": {
+      "geoname_id": "5375480",
+      "name": "Mountain View",
+      "ascii_name": "Mountain View",
+      "alternate_names": [
+        "Mauntin Vju",
+        "Mauntin Vyu",
+        "Mauntin-V'ju",
+        "Mauntin-Vju",
+        "Mountain View",
+        "Mountainview",
+        "NUQ",
+        "Prospectus Montis",
+        "ma'untana vhyu",
+        "ma'unte'ina bhi'u",
+        "ma'untena bhyu",
+        "ma'untena vyu",
+        "mang ting wei you",
+        "mantyn wyw",
+        "mauntenbyu",
+        "mauntinbyu",
+        "mavuntan viyu",
+        "mawntn fyw",
+        "mea n the nwiw",
+        "shan jing cheng",
+        "Маунтин Вю",
+        "Маунтин Вју",
+        "Маунтин-Вью",
+        "Маунтін-Вю",
+        "מאונטיין ויו",
+        "مانتین ویو",
+        "ماونتن فيو",
+        "माउंटन व्ह्यू",
+        "माउंटेन व्यू",
+        "माउन्टेन भ्यु",
+        "माउन्टेन भ्यू",
+        "মাউন্টেইন ভিউ",
+        "மவுண்டன் வியூ",
+        "เมาน์เทนวิว",
+        "マウンテンビュー",
+        "山景城",
+        "芒廷维尤",
+        "마운틴뷰"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "CA",
+      "admin2_code": "085",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 80435,
+      "elevation": "32",
+      "dem": 34,
+      "timezone": "America/Los_Angeles",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -122.08385,
+    "lat": 37.38605,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -110.33988,
+        41.26884
+      ]
+    },
+    "properties": {
+      "geoname_id": "5832901",
+      "name": "Mountain View",
+      "ascii_name": "Mountain View",
+      "alternate_names": [
+        "Mauntin Vju",
+        "Mauntin-V'ju",
+        "Mauntin-Vju",
+        "Mountain View",
+        "Mountainview",
+        "mang ting wei you",
+        "mawntn fyw",
+        "mawntn wyw  waywmyng",
+        "Маунтин Вју",
+        "Маунтин-Вью",
+        "Маунтін-Вю",
+        "ماؤنٹین ویو، وائیومنگ",
+        "ماونتن فيو",
+        "ماونتن ویو، وایومینگ",
+        "芒廷维尤"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "WY",
+      "admin2_code": "041",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1294,
+      "elevation": "2074",
+      "dem": 2080,
+      "timezone": "America/Denver",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -110.33988,
+    "lat": 41.26884,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -79.83144,
+        41.39784
+      ]
+    },
+    "properties": {
+      "geoname_id": "5190323",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "FKL",
+        "Franklin",
+        "Frenklin",
+        "franklyn",
+        "franklyn  pnsylwanya",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرانکلین، پنسیلوانیا",
+        "فرینکلن، وینانگو کاؤنٹی، پنسلوانیا"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "PA",
+      "admin2_code": "121",
+      "admin3_code": "27456",
+      "admin4_code": null,
+      "population": 6302,
+      "elevation": "307",
+      "dem": 310,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -79.83144,
+    "lat": 41.39784,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -98.70641,
+        28.86192
+      ]
+    },
+    "properties": {
+      "geoname_id": "4680560",
+      "name": "Charlotte",
+      "ascii_name": "Charlotte",
+      "alternate_names": [
+        "Sharlott",
+        "Шарлотт"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TX",
+      "admin2_code": "013",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1815,
+      "elevation": "165",
+      "dem": 167,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -98.70641,
+    "lat": 28.86192,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -65.33409,
+        -24.36841
+      ]
+    },
+    "properties": {
+      "geoname_id": "3838064",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "AR",
+      "cou_name_en": "Argentina",
+      "country_code_2": null,
+      "admin1_code": "10",
+      "admin2_code": "38056",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 0,
+      "elevation": null,
+      "dem": 1293,
+      "timezone": "America/Argentina/Jujuy",
+      "modification_date": "2023-06-14",
+      "label_en": "Argentina"
+    },
+    "lng": -65.33409,
+    "lat": -24.36841,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -91.70376,
+        36.99533
+      ]
+    },
+    "properties": {
+      "geoname_id": "4399745",
+      "name": "Mountain View",
+      "ascii_name": "Mountain View",
+      "alternate_names": [
+        "Campbell Town",
+        "Mauntin-V'ju",
+        "Mountain View",
+        "Маунтин-Вью"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "MO",
+      "admin2_code": "091",
+      "admin3_code": "27748",
+      "admin4_code": null,
+      "population": 2673,
+      "elevation": "348",
+      "dem": 349,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -91.70376,
+    "lat": 36.99533,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -88.99923,
+        33.89845
+      ]
+    },
+    "properties": {
+      "geoname_id": "4430529",
+      "name": "Houston",
+      "ascii_name": "Houston",
+      "alternate_names": [
+        "Kh'juston",
+        "Khauston",
+        "hywstn",
+        "hywstn  mysysypy",
+        "Хаустон",
+        "Хьюстон",
+        "هيوستن",
+        "هیوستن، میسیسیپی",
+        "ہیوسٹن، مسیسپی"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "MS",
+      "admin2_code": "017",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 3544,
+      "elevation": "108",
+      "dem": 109,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -88.99923,
+    "lat": 33.89845,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -81.36898,
+        35.68319
+      ]
+    },
+    "properties": {
+      "geoname_id": "4481090",
+      "name": "Mountain View",
+      "ascii_name": "Mountain View",
+      "alternate_names": [
+        "Mauntin-V'ju",
+        "Маунтин-Вью"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "NC",
+      "admin2_code": "035",
+      "admin3_code": "91468",
+      "admin4_code": null,
+      "population": 3552,
+      "elevation": "336",
+      "dem": 340,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -81.36898,
+    "lat": 35.68319,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -155.10806,
+        19.55583
+      ]
+    },
+    "properties": {
+      "geoname_id": "5851253",
+      "name": "Mountain View",
+      "ascii_name": "Mountain View",
+      "alternate_names": [
+        "Mauna Hu'ihu'i",
+        "Mauna Hu‘ihu‘i",
+        "Maunahu'ihu'i",
+        "Maunahu‘ihu‘i",
+        "Mauntin-V'ju",
+        "Mountain View",
+        "Mountainview",
+        "Маунтин-Вью"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "HI",
+      "admin2_code": "001",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 3924,
+      "elevation": "437",
+      "dem": 440,
+      "timezone": "Pacific/Honolulu",
+      "modification_date": "2011-05-14",
+      "label_en": "United States"
+    },
+    "lng": -155.10806,
+    "lat": 19.55583,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -123.11483,
+        45.24428
+      ]
+    },
+    "properties": {
+      "geoname_id": "5735609",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": [
+        "Lafajehtt",
+        "Lafajet",
+        "Lafejet",
+        "lafayt  awrgn",
+        "lafayyt",
+        "lafyt  awrygan",
+        "Лафайет",
+        "Лафайэтт",
+        "Лафејет",
+        "لافاييت",
+        "لافایت، اورگن",
+        "لافیت، اوریگان"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "OR",
+      "admin2_code": "071",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 3969,
+      "elevation": "52",
+      "dem": 52,
+      "timezone": "America/Los_Angeles",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -123.11483,
+    "lat": 45.24428,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -53.73578,
+        -26.05993
+      ]
+    },
+    "properties": {
+      "geoname_id": "3429302",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "AR",
+      "cou_name_en": "Argentina",
+      "country_code_2": null,
+      "admin1_code": "14",
+      "admin2_code": "54049",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 3700,
+      "elevation": null,
+      "dem": 526,
+      "timezone": "America/Argentina/Cordoba",
+      "modification_date": "2023-08-29",
+      "label_en": "Argentina"
+    },
+    "lng": -53.73578,
+    "lat": -26.05993,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.38154,
+        35.18232
+      ]
+    },
+    "properties": {
+      "geoname_id": "4467128",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "frankln",
+        "frnklyn  karwlynay shmaly",
+        "frynkln  shmaly kyrwlayna",
+        "Франклин",
+        "فرانكلن",
+        "فرنکلین، کارولینای شمالی",
+        "فرینکلن، شمالی کیرولائنا"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "NC",
+      "admin2_code": "113",
+      "admin3_code": "91156",
+      "admin4_code": null,
+      "population": 3940,
+      "elevation": "646",
+      "dem": 651,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -83.38154,
+    "lat": 35.18232,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        120.67163,
+        15.28636
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690314",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "03",
+      "admin2_code": "63",
+      "admin3_code": "036905000",
+      "admin4_code": null,
+      "population": 2568,
+      "elevation": null,
+      "dem": 35,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 120.67163,
+    "lat": 15.28636,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        120.61183,
+        14.96668
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690320",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "03",
+      "admin2_code": "50",
+      "admin3_code": "035407000",
+      "admin4_code": null,
+      "population": 2607,
+      "elevation": null,
+      "dem": 6,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 120.61183,
+    "lat": 14.96668,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -66.94962,
+        18.45161
+      ]
+    },
+    "properties": {
+      "geoname_id": "4568077",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PR",
+      "cou_name_en": "Puerto Rico",
+      "country_code_2": null,
+      "admin1_code": "115",
+      "admin2_code": "7268283",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1203,
+      "elevation": "168",
+      "dem": 164,
+      "timezone": "America/Puerto_Rico",
+      "modification_date": "2015-08-03",
+      "label_en": "Puerto Rico"
+    },
+    "lng": -66.94962,
+    "lat": 18.45161,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -73.26096,
+        44.30977
+      ]
+    },
+    "properties": {
+      "geoname_id": "5234793",
+      "name": "Charlotte",
+      "ascii_name": "Charlotte",
+      "alternate_names": [
+        "Charlotta",
+        "Charlotte",
+        "Charlotte Four Corners",
+        "Sharlott",
+        "West Charlotte",
+        "sharlwt",
+        "Шарлотт",
+        "شارلوت"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "VT",
+      "admin2_code": "007",
+      "admin3_code": "13300",
+      "admin4_code": null,
+      "population": 3861,
+      "elevation": "51",
+      "dem": 51,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -73.26096,
+    "lat": 44.30977,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -68.43384,
+        7.96378
+      ]
+    },
+    "properties": {
+      "geoname_id": "3628657",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "Aldea San Antonio",
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "VE",
+      "cou_name_en": "Venezuela, Bolivarian Rep. of",
+      "country_code_2": null,
+      "admin1_code": "05",
+      "admin2_code": "0603",
+      "admin3_code": "060304",
+      "admin4_code": null,
+      "population": 0,
+      "elevation": null,
+      "dem": 70,
+      "timezone": "America/Caracas",
+      "modification_date": "2012-01-31",
+      "label_en": "Venezuela, Bolivarian Rep. of"
+    },
+    "lng": -68.43384,
+    "lat": 7.96378,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -80.49895,
+        35.72125
+      ]
+    },
+    "properties": {
+      "geoname_id": "4467129",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Franklinville"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "NC",
+      "admin2_code": "159",
+      "admin3_code": "91160",
+      "admin4_code": null,
+      "population": 3619,
+      "elevation": "240",
+      "dem": 240,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -80.49895,
+    "lat": 35.72125,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -87.95979,
+        42.15141
+      ]
+    },
+    "properties": {
+      "geoname_id": "4885955",
+      "name": "Buffalo Grove",
+      "ascii_name": "Buffalo Grove",
+      "alternate_names": [
+        "Bafalo Grouv",
+        "Bafalo Grouvas",
+        "baffarogurobu",
+        "baphelo grobha",
+        "bwfalw ghrwf",
+        "Бафало Гроув",
+        "بفیلو گروو، الینوائے",
+        "بوفالو غروف",
+        "बफेलो ग्रोभ",
+        "バッファローグローブ"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "IL",
+      "admin2_code": "031",
+      "admin3_code": "81100",
+      "admin4_code": null,
+      "population": 41496,
+      "elevation": "207",
+      "dem": 210,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -87.95979,
+    "lat": 42.15141,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -85.2819,
+        34.7048
+      ]
+    },
+    "properties": {
+      "geoname_id": "4204241",
+      "name": "LaFayette",
+      "ascii_name": "LaFayette",
+      "alternate_names": [
+        "Benton",
+        "Chattooga",
+        "La Fayette",
+        "LaFayette",
+        "Lafayette",
+        "Lafejet",
+        "la phayeta",
+        "lafayt  jarjya",
+        "lafayt  jwrjya",
+        "lafayyt",
+        "Лафејет",
+        "لافائت، جارجیا",
+        "لافاييت",
+        "لافایت، جورجیا",
+        "ला फायेट"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "GA",
+      "admin2_code": "295",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 7173,
+      "elevation": "250",
+      "dem": 249,
+      "timezone": "America/New_York",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -85.2819,
+    "lat": 34.7048,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -91.95599,
+        37.32616
+      ]
+    },
+    "properties": {
+      "geoname_id": "4391354",
+      "name": "Houston",
+      "ascii_name": "Houston",
+      "alternate_names": [
+        "Houston",
+        "Kh'juston",
+        "Mineral Springs City",
+        "Хьюстон"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "MO",
+      "admin2_code": "215",
+      "admin3_code": "57890",
+      "admin4_code": null,
+      "population": 2082,
+      "elevation": "355",
+      "dem": 355,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -91.95599,
+    "lat": 37.32616,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -80.84313,
+        35.22709
+      ]
+    },
+    "properties": {
+      "geoname_id": "4460243",
+      "name": "Charlotte",
+      "ascii_name": "Charlotte",
+      "alternate_names": [
+        "CLT",
+        "Carolinum",
+        "Charlotte",
+        "Charlotte i Nord-Carolina",
+        "Charlottesburg",
+        "Charlottesburgh",
+        "Sarlot",
+        "Sarlota",
+        "Sarlote",
+        "Sarloto",
+        "Sarlott",
+        "Sharlt",
+        "Sharlat",
+        "Sharlot",
+        "Sharlott",
+        "carlat",
+        "charlxtt",
+        "saralata",
+        "sarlata",
+        "sarlet",
+        "sharlotʼi",
+        "sharlwt  karwlynay shmaly",
+        "sharotto",
+        "syalleos",
+        "syallos",
+        "tsharlwt",
+        "xia luo te",
+        "Ŝarloto",
+        "Şarlott",
+        "Šarlota",
+        "Šarlotė",
+        "Σάρλοτ",
+        "Шарлат",
+        "Шарлот",
+        "Шарлотт",
+        "Шарлът",
+        "Շառլոթ",
+        "שארלוט",
+        "تشارلوت",
+        "شارلوت، کارولینای شمالی",
+        "شارلوٹ، شمالی کیرولائنا",
+        "शार्लट",
+        "শার্লট",
+        "ਸ਼ਾਰਲਟ",
+        "சார்லட்",
+        "షార్లెట్",
+        "ಷಾರ್ಲೆಟ್",
+        "ชาร์ลอตต์",
+        "შარლოტი",
+        "シャーロット",
+        "夏洛特",
+        "샬럿",
+        "샬롯"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "NC",
+      "admin2_code": "119",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 874579,
+      "elevation": "229",
+      "dem": 272,
+      "timezone": "America/New_York",
+      "modification_date": "2022-01-28",
+      "label_en": "United States"
+    },
+    "lng": -80.84313,
+    "lat": 35.22709,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -84.30411,
+        39.55895
+      ]
+    },
+    "properties": {
+      "geoname_id": "4512203",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "franklyn",
+        "franklyn  awhayw",
+        "Франклин",
+        "فرانكلين",
+        "فرانکلین، اوهایو",
+        "فرینکلن، اوہائیو"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "OH",
+      "admin2_code": "165",
+      "admin3_code": "28490",
+      "admin4_code": null,
+      "population": 11783,
+      "elevation": "207",
+      "dem": 208,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -84.30411,
+    "lat": 39.55895,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -92.01984,
+        30.22409
+      ]
+    },
+    "properties": {
+      "geoname_id": "4330145",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": [
+        "LFT",
+        "La Fayette",
+        "Lafajet",
+        "Lafayette",
+        "Lafejet",
+        "Lafejett",
+        "Little Manchac",
+        "Pinhool",
+        "Vermilion",
+        "Vermilionville",
+        "Vermillion Bridge",
+        "Vermillionville",
+        "Village of Saint Jean Au Vermilion",
+        "la fa ye",
+        "lafayt  lwyyzyana",
+        "lafayyt",
+        "lapies",
+        "rafaietto",
+        "Лафайет",
+        "Лафейетт",
+        "Лафејет",
+        "לפאייט",
+        "لافاييت",
+        "لافایت، لوئیزیانا",
+        "لافیت، لوسیانہ",
+        "ラファイエット",
+        "拉法葉",
+        "라피엣"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "LA",
+      "admin2_code": "055",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 127657,
+      "elevation": "11",
+      "dem": 15,
+      "timezone": "America/Chicago",
+      "modification_date": "2018-02-03",
+      "label_en": "United States"
+    },
+    "lng": -92.01984,
+    "lat": 30.22409,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -65.70874,
+        -28.01009
+      ]
+    },
+    "properties": {
+      "geoname_id": "3838057",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "AR",
+      "cou_name_en": "Argentina",
+      "country_code_2": null,
+      "admin1_code": "02",
+      "admin2_code": "10077",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 4290,
+      "elevation": null,
+      "dem": 1020,
+      "timezone": "America/Argentina/Catamarca",
+      "modification_date": "2019-03-26",
+      "label_en": "Argentina"
+    },
+    "lng": -65.70874,
+    "lat": -28.01009,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        121.10917,
+        16.35028
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690303",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "02",
+      "admin2_code": "48",
+      "admin3_code": "025004000",
+      "admin4_code": null,
+      "population": 2488,
+      "elevation": null,
+      "dem": 348,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 121.10917,
+    "lat": 16.35028,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -93.32694,
+        44.56472
+      ]
+    },
+    "properties": {
+      "geoname_id": "7121608",
+      "name": "Elko New Market",
+      "ascii_name": "Elko New Market",
+      "alternate_names": [
+        "City of Elko New Market",
+        "Elko New Market"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "MN",
+      "admin2_code": "139",
+      "admin3_code": "18662",
+      "admin4_code": null,
+      "population": 4705,
+      "elevation": "348",
+      "dem": 350,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -93.32694,
+    "lat": 44.56472,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -84.83582,
+        42.56365
+      ]
+    },
+    "properties": {
+      "geoname_id": "4988584",
+      "name": "Charlotte",
+      "ascii_name": "Charlotte",
+      "alternate_names": [
+        "Carmel",
+        "Charlotte",
+        "Eaton Centre",
+        "Sharlot",
+        "Sharlott",
+        "sharlwt",
+        "sharlwt  mshy gn",
+        "sharlwt  myshygan",
+        "Шарлот",
+        "Шарлотт",
+        "شارلوت",
+        "شارلوت، مشی گن",
+        "شارلوت، میشیگان"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "MI",
+      "admin2_code": "045",
+      "admin3_code": "14820",
+      "admin4_code": null,
+      "population": 9054,
+      "elevation": "277",
+      "dem": 279,
+      "timezone": "America/Detroit",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -84.83582,
+    "lat": 42.56365,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -79.54743,
+        9.1729
+      ]
+    },
+    "properties": {
+      "geoname_id": "10180024",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PA",
+      "cou_name_en": "Panama",
+      "country_code_2": null,
+      "admin1_code": "08",
+      "admin2_code": "0808",
+      "admin3_code": "080815",
+      "admin4_code": null,
+      "population": 1435,
+      "elevation": null,
+      "dem": 123,
+      "timezone": "America/Panama",
+      "modification_date": "2020-10-21",
+      "label_en": "Panama"
+    },
+    "lng": -79.54743,
+    "lat": 9.1729,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -4.55201,
+        55.86859
+      ]
+    },
+    "properties": {
+      "geoname_id": "2646507",
+      "name": "Houston",
+      "ascii_name": "Houston",
+      "alternate_names": [
+        "Cille Pheadair"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "GB",
+      "cou_name_en": "United Kingdom",
+      "country_code_2": null,
+      "admin1_code": "SCT",
+      "admin2_code": "W2",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 6420,
+      "elevation": null,
+      "dem": 41,
+      "timezone": "Europe/London",
+      "modification_date": "2017-06-12",
+      "label_en": "United Kingdom"
+    },
+    "lng": -4.55201,
+    "lat": 55.86859,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -75.48009,
+        3.91423
+      ]
+    },
+    "properties": {
+      "geoname_id": "3670162",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "CO",
+      "cou_name_en": "Colombia",
+      "country_code_2": null,
+      "admin1_code": "28",
+      "admin2_code": "73675",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 5185,
+      "elevation": null,
+      "dem": 1431,
+      "timezone": "America/Bogota",
+      "modification_date": "2018-09-05",
+      "label_en": "Colombia"
+    },
+    "lng": -75.48009,
+    "lat": 3.91423,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.39673,
+        42.08343
+      ]
+    },
+    "properties": {
+      "geoname_id": "4937276",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Franklin Centre",
+        "Franklin Village",
+        "Frenklin",
+        "franklyn",
+        "frankyn  masachwst",
+        "fu lan ke lin",
+        "furankurin",
+        "peulaengkeullin",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرانکین، ماساچوست",
+        "فرینکلن، میساچوسٹس",
+        "フランクリン",
+        "富兰克林",
+        "프랭클린"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "MA",
+      "admin2_code": "021",
+      "admin3_code": "25172",
+      "admin4_code": null,
+      "population": 30636,
+      "elevation": "92",
+      "dem": 94,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -71.39673,
+    "lat": 42.08343,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        121.29017,
+        13.89654
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690344",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "40",
+      "admin2_code": "H2",
+      "admin3_code": "045641000",
+      "admin4_code": null,
+      "population": 2259,
+      "elevation": null,
+      "dem": 66,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 121.29017,
+    "lat": 13.89654,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -92.11765,
+        35.86841
+      ]
+    },
+    "properties": {
+      "geoname_id": "4122986",
+      "name": "Mountain View",
+      "ascii_name": "Mountain View",
+      "alternate_names": [
+        "Mauntin Vju",
+        "Mauntin-V'ju",
+        "Mauntin-Vju",
+        "Mountain View",
+        "Mountainview",
+        "ma'untena bhyu",
+        "mantyn wyw",
+        "mawntn fyw",
+        "Маунтин Вју",
+        "Маунтин-Вью",
+        "Маунтін-Вю",
+        "ماؤنٹین ویو، آرکنساس",
+        "مانتین ویو",
+        "ماونتن فيو",
+        "माउन्टेन भ्यू"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "AR",
+      "admin2_code": "137",
+      "admin3_code": "90366",
+      "admin4_code": null,
+      "population": 2837,
+      "elevation": "232",
+      "dem": 231,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -92.11765,
+    "lat": 35.86841,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -82.27453,
+        28.33611
+      ]
+    },
+    "properties": {
+      "geoname_id": "4171771",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antinio",
+        "San Antonio",
+        "San-Antonio",
+        "san antwnyw",
+        "sheng an dong ni ao",
+        "sn antwnyw  flwryda",
+        "syana entaniyo",
+        "Сан Антонио",
+        "Сан-Антонио",
+        "سان أنطونيو",
+        "سن آنتونیو، فلوریدا",
+        "स्यान एन्टनियो",
+        "圣安东尼奥"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "FL",
+      "admin2_code": "101",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1308,
+      "elevation": "51",
+      "dem": 56,
+      "timezone": "America/New_York",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -82.27453,
+    "lat": 28.33611,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -84.18592,
+        9.9816
+      ]
+    },
+    "properties": {
+      "geoname_id": "3621967",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio",
+        "San Antonio de Belen"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "CR",
+      "cou_name_en": "Costa Rica",
+      "country_code_2": null,
+      "admin1_code": "04",
+      "admin2_code": "407",
+      "admin3_code": "40701",
+      "admin4_code": null,
+      "population": 10938,
+      "elevation": null,
+      "dem": 900,
+      "timezone": "America/Costa_Rica",
+      "modification_date": "2021-11-11",
+      "label_en": "Costa Rica"
+    },
+    "lng": -84.18592,
+    "lat": 9.9816,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        121.5,
+        14.2
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690336",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "40",
+      "admin2_code": "33",
+      "admin3_code": "043412000",
+      "admin4_code": null,
+      "population": 2929,
+      "elevation": null,
+      "dem": 384,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 121.5,
+    "lat": 14.2,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -73.91591,
+        45.03338
+      ]
+    },
+    "properties": {
+      "geoname_id": "5957404",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "CA",
+      "cou_name_en": "Canada",
+      "country_code_2": null,
+      "admin1_code": "10",
+      "admin2_code": "16",
+      "admin3_code": "69010",
+      "admin4_code": null,
+      "population": 1688,
+      "elevation": null,
+      "dem": 137,
+      "timezone": "America/Toronto",
+      "modification_date": "2016-06-22",
+      "label_en": "Canada"
+    },
+    "lng": -73.91591,
+    "lat": 45.03338,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -122.11746,
+        38.00881
+      ]
+    },
+    "properties": {
+      "geoname_id": "5375478",
+      "name": "Mountain View",
+      "ascii_name": "Mountain View",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "CA",
+      "admin2_code": "013",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 2372,
+      "elevation": "34",
+      "dem": 33,
+      "timezone": "America/Los_Angeles",
+      "modification_date": "2011-05-14",
+      "label_en": "United States"
+    },
+    "lng": -122.11746,
+    "lat": 38.00881,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -100.05844,
+        25.63868
+      ]
+    },
+    "properties": {
+      "geoname_id": "3987822",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "MX",
+      "cou_name_en": "Mexico",
+      "country_code_2": null,
+      "admin1_code": "19",
+      "admin2_code": "031",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 2391,
+      "elevation": null,
+      "dem": 374,
+      "timezone": "America/Monterrey",
+      "modification_date": "2013-07-31",
+      "label_en": "Mexico"
+    },
+    "lng": -100.05844,
+    "lat": 25.63868,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        121.79121,
+        17.27329
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690295",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "02",
+      "admin2_code": "31",
+      "admin3_code": "023118000",
+      "admin4_code": null,
+      "population": 2810,
+      "elevation": null,
+      "dem": 40,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 121.79121,
+    "lat": 17.27329,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -70.92593,
+        -17.21718
+      ]
+    },
+    "properties": {
+      "geoname_id": "12157094",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PE",
+      "cou_name_en": "Peru",
+      "country_code_2": null,
+      "admin1_code": "18",
+      "admin2_code": "1801",
+      "admin3_code": "180101",
+      "admin4_code": null,
+      "population": 15633,
+      "elevation": null,
+      "dem": 1455,
+      "timezone": "America/Lima",
+      "modification_date": "2020-05-08",
+      "label_en": "Peru"
+    },
+    "lng": -70.92593,
+    "lat": -17.21718,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        125.01141,
+        11.27682
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690376",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "08",
+      "admin2_code": "55",
+      "admin3_code": "086002000",
+      "admin4_code": null,
+      "population": 2325,
+      "elevation": null,
+      "dem": 7,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 125.01141,
+    "lat": 11.27682,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -56.08036,
+        -34.4513
+      ]
+    },
+    "properties": {
+      "geoname_id": "3440705",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "UY",
+      "cou_name_en": "Uruguay",
+      "country_code_2": null,
+      "admin1_code": "02",
+      "admin2_code": "20",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1453,
+      "elevation": null,
+      "dem": 52,
+      "timezone": "America/Montevideo",
+      "modification_date": "2019-03-30",
+      "label_en": "Uruguay"
+    },
+    "lng": -56.08036,
+    "lat": -34.4513,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -86.86889,
+        35.92506
+      ]
+    },
+    "properties": {
+      "geoname_id": "4623560",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "franklyn",
+        "franklyn  tnsy",
+        "furankurin",
+        "peulaengkeullin",
+        "Франклин",
+        "فرانكلين",
+        "فرانکلین، تنسی",
+        "فرینکلن، ٹینیسی",
+        "フランクリン",
+        "프랭클린"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TN",
+      "admin2_code": "187",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 72639,
+      "elevation": "196",
+      "dem": 201,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -86.86889,
+    "lat": 35.92506,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -86.57722,
+        36.72226
+      ]
+    },
+    "properties": {
+      "geoname_id": "4292193",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Frehnklin",
+        "franklyn",
+        "franklyn  kntaky",
+        "fu lan ke lin",
+        "Франклин",
+        "Фрэнклин",
+        "فرانكلين",
+        "فرانکلین، کنتاکی",
+        "فرینکلن، کینٹکی",
+        "富兰克林"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "KY",
+      "admin2_code": "213",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 8787,
+      "elevation": "216",
+      "dem": 219,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -86.57722,
+    "lat": 36.72226,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -126.67008,
+        54.39976
+      ]
+    },
+    "properties": {
+      "geoname_id": "5977783",
+      "name": "Houston",
+      "ascii_name": "Houston",
+      "alternate_names": [
+        "Houston",
+        "ZHO"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "CA",
+      "cou_name_en": "Canada",
+      "country_code_2": null,
+      "admin1_code": "02",
+      "admin2_code": "5951",
+      "admin3_code": "5951034",
+      "admin4_code": null,
+      "population": 2993,
+      "elevation": null,
+      "dem": 590,
+      "timezone": "America/Vancouver",
+      "modification_date": "2021-12-27",
+      "label_en": "Canada"
+    },
+    "lng": -126.67008,
+    "lat": 54.39976,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -97.18687,
+        19.27053
+      ]
+    },
+    "properties": {
+      "geoname_id": "3519830",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "MX",
+      "cou_name_en": "Mexico",
+      "country_code_2": null,
+      "admin1_code": "21",
+      "admin2_code": "058",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1069,
+      "elevation": null,
+      "dem": 2401,
+      "timezone": "America/Mexico_City",
+      "modification_date": "2018-11-03",
+      "label_en": "Mexico"
+    },
+    "lng": -97.18687,
+    "lat": 19.27053,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -102.25034,
+        22.22823
+      ]
+    },
+    "properties": {
+      "geoname_id": "3987877",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "MX",
+      "cou_name_en": "Mexico",
+      "country_code_2": null,
+      "admin1_code": "01",
+      "admin2_code": "009",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 3345,
+      "elevation": null,
+      "dem": 1918,
+      "timezone": "America/Mexico_City",
+      "modification_date": "2018-11-03",
+      "label_en": "Mexico"
+    },
+    "lng": -102.25034,
+    "lat": 22.22823,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -74.69346,
+        9.93303
+      ]
+    },
+    "properties": {
+      "geoname_id": "3670107",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "Caserio San Antonio",
+        "San Antonio",
+        "Tenerife"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "CO",
+      "cou_name_en": "Colombia",
+      "country_code_2": null,
+      "admin1_code": "38",
+      "admin2_code": "47798",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 8476,
+      "elevation": null,
+      "dem": 110,
+      "timezone": "America/Bogota",
+      "modification_date": "2016-01-28",
+      "label_en": "Colombia"
+    },
+    "lng": -74.69346,
+    "lat": 9.93303,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -87.33973,
+        36.17728
+      ]
+    },
+    "properties": {
+      "geoname_id": "4612828",
+      "name": "Charlotte",
+      "ascii_name": "Charlotte",
+      "alternate_names": [
+        "Charlotte",
+        "Charlottesville",
+        "Sharlott",
+        "Шарлотт"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TN",
+      "admin2_code": "043",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1506,
+      "elevation": "198",
+      "dem": 204,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -87.33973,
+    "lat": 36.17728,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -79.33115,
+        38.64289
+      ]
+    },
+    "properties": {
+      "geoname_id": "4806504",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Frankford",
+        "Frankfort",
+        "Franklin",
+        "Frenklin",
+        "franklyn",
+        "frnklyn  wyrjynyay ghrby",
+        "frynkln  mghrby wrjynya",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرنکلین، ویرجینیای غربی",
+        "فرینکلن، مغربی ورجینیا"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "WV",
+      "admin2_code": "071",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 677,
+      "elevation": "528",
+      "dem": 528,
+      "timezone": "America/New_York",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -79.33115,
+    "lat": 38.64289,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -86.87529,
+        40.4167
+      ]
+    },
+    "properties": {
+      "geoname_id": "4922462",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": [
+        "LAF",
+        "La Fayette",
+        "LaFayette",
+        "Lafajet",
+        "Lafayette",
+        "Lafejet",
+        "la fei te",
+        "lafayyt",
+        "lafyt  ayndyana",
+        "lapies",
+        "rafaietto",
+        "Лафайет",
+        "Лафејет",
+        "لا فائت، انڈیانا",
+        "لافاييت",
+        "لافیت، ایندیانا",
+        "ラファイエット",
+        "拉斐特",
+        "라피엣"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "IN",
+      "admin2_code": "157",
+      "admin3_code": "22342",
+      "admin4_code": null,
+      "population": 71111,
+      "elevation": "211",
+      "dem": 215,
+      "timezone": "America/Indiana/Indianapolis",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -86.87529,
+    "lat": 40.4167,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -98.95258,
+        40.09612
+      ]
+    },
+    "properties": {
+      "geoname_id": "5068640",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "franklyn",
+        "frnklyn  nbraska",
+        "frynkln  nybraska",
+        "Франклин",
+        "فرانكلين",
+        "فرنکلین، نبراسکا",
+        "فرینکلن، نیبراسکا"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "NE",
+      "admin2_code": "061",
+      "admin3_code": "17530",
+      "admin4_code": null,
+      "population": 920,
+      "elevation": "568",
+      "dem": 571,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -98.95258,
+    "lat": 40.09612,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -80.21145,
+        40.24646
+      ]
+    },
+    "properties": {
+      "geoname_id": "5194369",
+      "name": "Houston",
+      "ascii_name": "Houston",
+      "alternate_names": [
+        "Kh'juston",
+        "Хьюстон"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "PA",
+      "admin2_code": "125",
+      "admin3_code": "35896",
+      "admin4_code": null,
+      "population": 1266,
+      "elevation": "302",
+      "dem": 301,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -80.21145,
+    "lat": 40.24646,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -86.05499,
+        39.48061
+      ]
+    },
+    "properties": {
+      "geoname_id": "4828382",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "franklyn",
+        "franklyn  ayndyana",
+        "fu lan ke lin",
+        "peulaengkeullin",
+        "Франклин",
+        "فرانكلين",
+        "فرانکلین، ایندیانا",
+        "فرینکلن، انڈیانا",
+        "富蘭克林",
+        "프랭클린"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "IN",
+      "admin2_code": "081",
+      "admin3_code": "25468",
+      "admin4_code": null,
+      "population": 24598,
+      "elevation": "221",
+      "dem": 225,
+      "timezone": "America/Indiana/Indianapolis",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -86.05499,
+    "lat": 39.48061,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -91.5015,
+        29.79604
+      ]
+    },
+    "properties": {
+      "geoname_id": "4325150",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Frenklin",
+        "franklyn",
+        "franklyn  lwyyzyana",
+        "frynkln  lwzyana",
+        "fu lan ke lin",
+        "furankurin",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرانکلین، لوئیزیانا",
+        "فرینکلن، لوزیانا",
+        "フランクリン",
+        "富兰克林"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "LA",
+      "admin2_code": "101",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 7302,
+      "elevation": "3",
+      "dem": 11,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -91.5015,
+    "lat": 29.79604,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -99.71038,
+        20.53204
+      ]
+    },
+    "properties": {
+      "geoname_id": "3519816",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio",
+        "San Antonio Pueblo"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "MX",
+      "cou_name_en": "Mexico",
+      "country_code_2": null,
+      "admin1_code": "13",
+      "admin2_code": "059",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1634,
+      "elevation": null,
+      "dem": 1734,
+      "timezone": "America/Mexico_City",
+      "modification_date": "2018-11-03",
+      "label_en": "Mexico"
+    },
+    "lng": -99.71038,
+    "lat": 20.53204,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        120.68817,
+        15.15258
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690317",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "03",
+      "admin2_code": "50",
+      "admin3_code": "035403000",
+      "admin4_code": null,
+      "population": 2332,
+      "elevation": null,
+      "dem": 31,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 120.68817,
+    "lat": 15.15258,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        120.08673,
+        14.94659
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690321",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "03",
+      "admin2_code": "64",
+      "admin3_code": "037109000",
+      "admin4_code": null,
+      "population": 34217,
+      "elevation": null,
+      "dem": 16,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 120.08673,
+    "lat": 14.94659,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        149.14329,
+        -35.19946
+      ]
+    },
+    "properties": {
+      "geoname_id": "8349306",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPLX",
+      "country_code": "AU",
+      "cou_name_en": "Australia",
+      "country_code_2": null,
+      "admin1_code": "01",
+      "admin2_code": null,
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 6324,
+      "elevation": null,
+      "dem": 611,
+      "timezone": "Australia/Sydney",
+      "modification_date": "2019-07-18",
+      "label_en": "Australia"
+    },
+    "lng": 149.14329,
+    "lat": -35.19946,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -85.71609,
+        36.18589
+      ]
+    },
+    "properties": {
+      "geoname_id": "4635094",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TN",
+      "admin2_code": "141",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 4078,
+      "elevation": "303",
+      "dem": 297,
+      "timezone": "America/Chicago",
+      "modification_date": "2006-01-17",
+      "label_en": "United States"
+    },
+    "lng": -85.71609,
+    "lat": 36.18589,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -87.15,
+        15.33333
+      ]
+    },
+    "properties": {
+      "geoname_id": "3602474",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio",
+        "San Antonio de Jimia"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "HN",
+      "cou_name_en": "Honduras",
+      "country_code_2": null,
+      "admin1_code": "18",
+      "admin2_code": null,
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1711,
+      "elevation": null,
+      "dem": 577,
+      "timezone": "America/Tegucigalpa",
+      "modification_date": "2012-01-18",
+      "label_en": "Honduras"
+    },
+    "lng": -87.15,
+    "lat": 15.33333,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        123.4202,
+        13.371
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690357",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "05",
+      "admin2_code": "16",
+      "admin3_code": "051716000",
+      "admin4_code": null,
+      "population": 4374,
+      "elevation": null,
+      "dem": 42,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 123.4202,
+    "lat": 13.371,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -67.09851,
+        18.49217
+      ]
+    },
+    "properties": {
+      "geoname_id": "4568069",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PR",
+      "cou_name_en": "Puerto Rico",
+      "country_code_2": null,
+      "admin1_code": "005",
+      "admin2_code": "7268669",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 2300,
+      "elevation": "67",
+      "dem": 69,
+      "timezone": "America/Puerto_Rico",
+      "modification_date": "2015-08-03",
+      "label_en": "Puerto Rico"
+    },
+    "lng": -67.09851,
+    "lat": 18.49217,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.6473,
+        43.44424
+      ]
+    },
+    "properties": {
+      "geoname_id": "5086344",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "East Village",
+        "Franklin",
+        "Franklin Falls",
+        "Frenklin",
+        "Pemigewasset",
+        "Pemigewasset Village",
+        "Salisbury",
+        "franklyn",
+        "franklyn  nywhmpshayr",
+        "fu lan ke lin",
+        "furankurin",
+        "peulaengkeullin",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرانکلین، نیوهمپشایر",
+        "فرینکلن، نیو ہیمپشائر",
+        "フランクリン",
+        "富蘭克林",
+        "프랭클린"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "NH",
+      "admin2_code": "013",
+      "admin3_code": "27380",
+      "admin4_code": null,
+      "population": 8450,
+      "elevation": "94",
+      "dem": 95,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -71.6473,
+    "lat": 43.44424,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -86.15804,
+        39.76838
+      ]
+    },
+    "properties": {
+      "geoname_id": "4259418",
+      "name": "Indianapolis",
+      "ascii_name": "Indianapolis",
+      "alternate_names": [
+        "IND",
+        "Indianapoles",
+        "Indianapoli",
+        "Indianapolis",
+        "Indianapolisa",
+        "Indianapolės",
+        "Indianapòlis",
+        "Indianàpolis",
+        "Indianápolis",
+        "Indijanapolis",
+        "Indiyanapolis",
+        "Indyjanapalis",
+        "andyanabwlys",
+        "ayndyanapwlys",
+        "idi'anapolisa",
+        "indiaenapolliseu",
+        "indianaporisu",
+        "indiyanapolis",
+        "indiyanapolisa",
+        "intiyanapolis",
+        "xin deiy næ pho lis",
+        "yin di an na bo li si",
+        "İndianapolis",
+        "Ινδιανάπολη",
+        "Індыянапаліс",
+        "Індіанаполіс",
+        "Индианаполис",
+        "Индијанаполис",
+        "Ինդիանապոլիս",
+        "אינדיאנאפאליס",
+        "אינדיאנפוליס",
+        "إنديانابوليس",
+        "انڈیاناپولس",
+        "انڈیاناپولس، انڈیانا",
+        "ایندیاناپولیس",
+        "इंडियानापोलिस",
+        "इन्डियानापोलिस",
+        "इन्डियानापोलिस्",
+        "इन्दियानापोलिस",
+        "ইন্ডিয়ানাপোলিস",
+        "ਇੰਡੀਆਨਾਪੋਲਿਸ",
+        "இண்டியானாபொலிஸ்",
+        "อินเดียแนโพลิส",
+        "ინდიანაპოლისი",
+        "ኢንዲያናፖሊስ",
+        "インディアナポリス",
+        "印第安納波利斯",
+        "인디애나폴리스"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "IN",
+      "admin2_code": "097",
+      "admin3_code": "11512",
+      "admin4_code": null,
+      "population": 887642,
+      "elevation": "218",
+      "dem": 248,
+      "timezone": "America/Indiana/Indianapolis",
+      "modification_date": "2022-01-28",
+      "label_en": "United States"
+    },
+    "lng": -86.15804,
+    "lat": 39.76838,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -97.35694,
+        19.75611
+      ]
+    },
+    "properties": {
+      "geoname_id": "8859072",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "MX",
+      "cou_name_en": "Mexico",
+      "country_code_2": null,
+      "admin1_code": "21",
+      "admin2_code": "199",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1490,
+      "elevation": null,
+      "dem": 2432,
+      "timezone": "America/Mexico_City",
+      "modification_date": "2014-04-11",
+      "label_en": "Mexico"
+    },
+    "lng": -97.35694,
+    "lat": 19.75611,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -66.30267,
+        18.44884
+      ]
+    },
+    "properties": {
+      "geoname_id": "4568074",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PR",
+      "cou_name_en": "Puerto Rico",
+      "country_code_2": null,
+      "admin1_code": "051",
+      "admin2_code": "7268474",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 6456,
+      "elevation": "7",
+      "dem": 7,
+      "timezone": "America/Puerto_Rico",
+      "modification_date": "2015-08-03",
+      "label_en": "Puerto Rico"
+    },
+    "lng": -66.30267,
+    "lat": 18.44884,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -88.03842,
+        42.88863
+      ]
+    },
+    "properties": {
+      "geoname_id": "5253710",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Frenklin",
+        "franklyn",
+        "franklyn  wyskansyn",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرانکلین، ویسکانسین",
+        "فرینکلن، ملواکی کاؤنٹی، وسکونسن",
+        "ფრანკლინი"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "WI",
+      "admin2_code": "079",
+      "admin3_code": "27300",
+      "admin4_code": null,
+      "population": 36222,
+      "elevation": "244",
+      "dem": 246,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -88.03842,
+    "lat": 42.88863,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -76.35,
+        -6.36667
+      ]
+    },
+    "properties": {
+      "geoname_id": "3692640",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": null,
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "PE",
+      "cou_name_en": "Peru",
+      "country_code_2": null,
+      "admin1_code": "22",
+      "admin2_code": "2209",
+      "admin3_code": "220912",
+      "admin4_code": null,
+      "population": 0,
+      "elevation": null,
+      "dem": 951,
+      "timezone": "America/Lima",
+      "modification_date": "2012-07-19",
+      "label_en": "Peru"
+    },
+    "lng": -76.35,
+    "lat": -6.36667,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -86.26194,
+        39.95087
+      ]
+    },
+    "properties": {
+      "geoname_id": "4267336",
+      "name": "Zionsville",
+      "ascii_name": "Zionsville",
+      "alternate_names": [
+        "Zajonsvil",
+        "Зајонсвил"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "IN",
+      "admin2_code": "011",
+      "admin3_code": "86372",
+      "admin4_code": null,
+      "population": 26296,
+      "elevation": "257",
+      "dem": 259,
+      "timezone": "America/Indiana/Indianapolis",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -86.26194,
+    "lat": 39.95087,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        124.2791,
+        12.4129
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690370",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "08",
+      "admin2_code": "67",
+      "admin3_code": "084817000",
+      "admin4_code": null,
+      "population": 0,
+      "elevation": null,
+      "dem": 5,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 124.2791,
+    "lat": 12.4129,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -122.11802,
+        37.88576
+      ]
+    },
+    "properties": {
+      "geoname_id": "5364226",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": [
+        "La Fayette",
+        "Lafajet",
+        "Lafayette",
+        "Lafejet",
+        "la fei te",
+        "lafayt  kalyfrnya",
+        "lafayyty",
+        "laphayeta",
+        "lapies",
+        "rafaietto",
+        "Лафайет",
+        "Лафејет",
+        "لافاييتي",
+        "لافایت، کالیفرنیا",
+        "लाफायेट",
+        "ラファイエット",
+        "拉斐特",
+        "라피엣"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "CA",
+      "admin2_code": "013",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 25843,
+      "elevation": "94",
+      "dem": 94,
+      "timezone": "America/Los_Angeles",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -122.11802,
+    "lat": 37.88576,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -76.92246,
+        36.67765
+      ]
+    },
+    "properties": {
+      "geoname_id": "4759986",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "FKN",
+        "Franklin",
+        "Franklin Depot",
+        "Frenklin",
+        "Southampton",
+        "franklyn",
+        "franklyn  wyrjynya",
+        "frynkln  wrjynya",
+        "fu lan ke lin",
+        "furankurin",
+        "peulaengkeullin",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرانکلین، ویرجینیا",
+        "فرینکلن، ورجینیا",
+        "フランクリン",
+        "富蘭克林",
+        "프랭클린"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "VA",
+      "admin2_code": "620",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 8490,
+      "elevation": "5",
+      "dem": 12,
+      "timezone": "America/New_York",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -76.92246,
+    "lat": 36.67765,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -74.58044,
+        41.12204
+      ]
+    },
+    "properties": {
+      "geoname_id": "5098214",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Franklin Furnace",
+        "Frenklin",
+        "franklyn  nywjrsy",
+        "Франклин",
+        "Френклин",
+        "فرانکلین، نیوجرسی"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "NJ",
+      "admin2_code": "037",
+      "admin3_code": "24930",
+      "admin4_code": null,
+      "population": 4855,
+      "elevation": "187",
+      "dem": 186,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -74.58044,
+    "lat": 41.12204,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -96.48524,
+        31.02602
+      ]
+    },
+    "properties": {
+      "geoname_id": "4692193",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Frenklin",
+        "franklyn",
+        "franklyn  tgzas",
+        "Франклин",
+        "Френклин",
+        "فرانكلين",
+        "فرانکلین، تگزاس",
+        "فرینکلن، ٹیکساس"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TX",
+      "admin2_code": "395",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1610,
+      "elevation": "137",
+      "dem": 137,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -96.48524,
+    "lat": 31.02602,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -83.30604,
+        42.52226
+      ]
+    },
+    "properties": {
+      "geoname_id": "4993335",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Franklin Village",
+        "Франклин"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "MI",
+      "admin2_code": "125",
+      "admin3_code": "74920",
+      "admin4_code": null,
+      "population": 3237,
+      "elevation": "255",
+      "dem": 257,
+      "timezone": "America/Detroit",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -83.30604,
+    "lat": 42.52226,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -85.40106,
+        32.89985
+      ]
+    },
+    "properties": {
+      "geoname_id": "4071267",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": [
+        "Chambersville",
+        "La Fayette",
+        "LaFayette",
+        "Lafayette",
+        "Lafejett",
+        "LayFayette",
+        "Лафейетт"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "AL",
+      "admin2_code": "017",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 3003,
+      "elevation": "257",
+      "dem": 264,
+      "timezone": "America/Chicago",
+      "modification_date": "2022-08-06",
+      "label_en": "United States"
+    },
+    "lng": -85.40106,
+    "lat": 32.89985,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -89.02417,
+        16.24361
+      ]
+    },
+    "properties": {
+      "geoname_id": "3581222",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "BZ",
+      "cou_name_en": "Belize",
+      "country_code_2": null,
+      "admin1_code": "06",
+      "admin2_code": null,
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1204,
+      "elevation": null,
+      "dem": 89,
+      "timezone": "America/Belize",
+      "modification_date": "2022-01-08",
+      "label_en": "Belize"
+    },
+    "lng": -89.02417,
+    "lat": 16.24361,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        147.00906,
+        -43.08884
+      ]
+    },
+    "properties": {
+      "geoname_id": "2166160",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "franklyn  tasmany",
+        "فرانکلین، تاسمانی"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "AU",
+      "cou_name_en": "Australia",
+      "country_code_2": null,
+      "admin1_code": "06",
+      "admin2_code": "63010",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 1061,
+      "elevation": "18",
+      "dem": 18,
+      "timezone": "Australia/Hobart",
+      "modification_date": "2019-07-18",
+      "label_en": "Australia"
+    },
+    "lng": 147.00906,
+    "lat": -43.08884,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -57.54725,
+        -25.42126
+      ]
+    },
+    "properties": {
+      "geoname_id": "3437127",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PY",
+      "cou_name_en": "Paraguay",
+      "country_code_2": null,
+      "admin1_code": "06",
+      "admin2_code": "1113",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 55754,
+      "elevation": null,
+      "dem": 123,
+      "timezone": "America/Asuncion",
+      "modification_date": "2018-04-09",
+      "label_en": "Paraguay"
+    },
+    "lng": -57.54725,
+    "lat": -25.42126,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -68.23224,
+        44.58702
+      ]
+    },
+    "properties": {
+      "geoname_id": "4964817",
+      "name": "Franklin",
+      "ascii_name": "Franklin",
+      "alternate_names": [
+        "Franklin",
+        "Франклин"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "ME",
+      "admin2_code": "009",
+      "admin3_code": "26350",
+      "admin4_code": null,
+      "population": 1424,
+      "elevation": "17",
+      "dem": 16,
+      "timezone": "America/New_York",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -68.23224,
+    "lat": 44.58702,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -89.63012,
+        44.95914
+      ]
+    },
+    "properties": {
+      "geoname_id": "5278120",
+      "name": "Wausau",
+      "ascii_name": "Wausau",
+      "alternate_names": [
+        "AUW",
+        "Big Bull Falls",
+        "Pah-je-tak-a-ke-ning-a-ning",
+        "Voso",
+        "Wassa",
+        "Wausau",
+        "wasa  wskwnsn",
+        "wasa  wyskansyn",
+        "wawsw",
+        "Восо",
+        "واسا، وسکونسن",
+        "واسا، ویسکانسین",
+        "واوسو"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "WI",
+      "admin2_code": "073",
+      "admin3_code": "84475",
+      "admin4_code": null,
+      "population": 39094,
+      "elevation": "367",
+      "dem": 371,
+      "timezone": "America/Chicago",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -89.63012,
+    "lat": 44.95914,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -105.08971,
+        39.9936
+      ]
+    },
+    "properties": {
+      "geoname_id": "5427771",
+      "name": "Lafayette",
+      "ascii_name": "Lafayette",
+      "alternate_names": [
+        "Lafajet",
+        "Lafajett",
+        "Lafejet",
+        "la fa ye",
+        "lafayt  klradw",
+        "lafayyt",
+        "laphayeta",
+        "lapies",
+        "Лафайет",
+        "Лафайетт",
+        "Лафејет",
+        "لافائیٹ، کولوراڈو",
+        "لافاييت",
+        "لافایت، کلرادو",
+        "लाफायेट",
+        "拉法叶",
+        "라피엣"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "CO",
+      "admin2_code": "013",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 27729,
+      "elevation": "1588",
+      "dem": 1593,
+      "timezone": "America/Denver",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -105.08971,
+    "lat": 39.9936,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -95.36327,
+        29.76328
+      ]
+    },
+    "properties": {
+      "geoname_id": "4699066",
+      "name": "Houston",
+      "ascii_name": "Houston",
+      "alternate_names": [
+        "Chiouston",
+        "HOU",
+        "Hiu-su-tun",
+        "Hiustonas",
+        "Hiû-sṳ̂-tûn",
+        "Hjuston",
+        "Hjustona",
+        "Hjūstona",
+        "Houston",
+        "Houston City",
+        "Hustonia",
+        "Hustono",
+        "Hyuston",
+        "Kh'juston",
+        "Khjustn",
+        "Khjustan",
+        "Khjuston",
+        "hi'ustana",
+        "hiustʼoni",
+        "hiws tan",
+        "hiyustan",
+        "hou si dun",
+        "husatana",
+        "hyuseuteon",
+        "hyustan",
+        "hyustana",
+        "hyusuton",
+        "hywstn",
+        "hywstwn",
+        "xiu si dun",
+        "ywstwn",
+        "Χιούστον",
+        "Хьюстон",
+        "Хюстан",
+        "Хюстон",
+        "Хюстън",
+        "Хјустон",
+        "Հյուստոն",
+        "היוסטן",
+        "יוסטון",
+        "هيوستن",
+        "هیوستون",
+        "ھیووستن",
+        "ہywsٹn",
+        "ہیوسٹن",
+        "ह्युस्टन",
+        "হিউস্টন",
+        "ਹੂਸਟਨ",
+        "હ્યુસ્ટન",
+        "ஹியூஸ்டன்",
+        "హ్యూస్టన్",
+        "ഹ്യൂസ്റ്റൺ",
+        "ฮิวสตัน",
+        "ဟူစတန်မြို့",
+        "ჰიუსტონი",
+        "ሂውስተን",
+        "ヒューストン",
+        "休斯敦",
+        "休斯頓",
+        "休斯顿",
+        "侯斯頓",
+        "휴스턴"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "TX",
+      "admin2_code": "201",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 2304580,
+      "elevation": "12",
+      "dem": 30,
+      "timezone": "America/Chicago",
+      "modification_date": "2023-06-01",
+      "label_en": "United States"
+    },
+    "lng": -95.36327,
+    "lat": 29.76328,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -85.84804,
+        39.93226
+      ]
+    },
+    "properties": {
+      "geoname_id": "4257630",
+      "name": "Fortville",
+      "ascii_name": "Fortville",
+      "alternate_names": [
+        "Fortville",
+        "Phoebe Forts Corner",
+        "Walpole"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "IN",
+      "admin2_code": "059",
+      "admin3_code": "78866",
+      "admin4_code": null,
+      "population": 3957,
+      "elevation": "261",
+      "dem": 262,
+      "timezone": "America/Indiana/Indianapolis",
+      "modification_date": "2017-05-23",
+      "label_en": "United States"
+    },
+    "lng": -85.84804,
+    "lat": 39.93226,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -80.92971,
+        8.0722
+      ]
+    },
+    "properties": {
+      "geoname_id": "3701565",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "PA",
+      "cou_name_en": "Panama",
+      "country_code_2": null,
+      "admin1_code": "10",
+      "admin2_code": "0901",
+      "admin3_code": "090105",
+      "admin4_code": null,
+      "population": 0,
+      "elevation": null,
+      "dem": 96,
+      "timezone": "America/Panama",
+      "modification_date": "2021-04-10",
+      "label_en": "Panama"
+    },
+    "lng": -80.92971,
+    "lat": 8.0722,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        120.856,
+        15.3062
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690313",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA3",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "03",
+      "admin2_code": "47",
+      "admin3_code": "034924000",
+      "admin4_code": null,
+      "population": 26247,
+      "elevation": null,
+      "dem": 22,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 120.856,
+    "lat": 15.3062,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -105.08665,
+        39.92054
+      ]
+    },
+    "properties": {
+      "geoname_id": "5415035",
+      "name": "Broomfield",
+      "ascii_name": "Broomfield",
+      "alternate_names": [
+        "BJC",
+        "Broomfield",
+        "Broomfield Heights",
+        "City of Broomfield",
+        "Zangs Spur"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "US",
+      "cou_name_en": "United States",
+      "country_code_2": null,
+      "admin1_code": "CO",
+      "admin2_code": "014",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 65065,
+      "elevation": "1644",
+      "dem": 1649,
+      "timezone": "America/Denver",
+      "modification_date": "2017-03-09",
+      "label_en": "United States"
+    },
+    "lng": -105.08665,
+    "lat": 39.92054,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -98.90322,
+        21.62059
+      ]
+    },
+    "properties": {
+      "geoname_id": "3519799",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPLA2",
+      "country_code": "MX",
+      "cou_name_en": "Mexico",
+      "country_code_2": null,
+      "admin1_code": "24",
+      "admin2_code": "026",
+      "admin3_code": null,
+      "admin4_code": null,
+      "population": 643,
+      "elevation": null,
+      "dem": 221,
+      "timezone": "America/Mexico_City",
+      "modification_date": "2018-11-03",
+      "label_en": "Mexico"
+    },
+    "lng": -98.90322,
+    "lat": 21.62059,
+    "size": 10
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        122.45,
+        10.8
+      ]
+    },
+    "properties": {
+      "geoname_id": "1690389",
+      "name": "San Antonio",
+      "ascii_name": "San Antonio",
+      "alternate_names": [
+        "San Antonio"
+      ],
+      "feature_class": "P",
+      "feature_code": "PPL",
+      "country_code": "PH",
+      "cou_name_en": "Philippines",
+      "country_code_2": null,
+      "admin1_code": "06",
+      "admin2_code": "30",
+      "admin3_code": "063002000",
+      "admin4_code": null,
+      "population": 2646,
+      "elevation": null,
+      "dem": 48,
+      "timezone": "Asia/Manila",
+      "modification_date": "2017-12-13",
+      "label_en": "Philippines"
+    },
+    "lng": 122.45,
+    "lat": 10.8,
+    "size": 10
+  }
+]

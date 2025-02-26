@@ -282,3 +282,14 @@
 @utility slide-out-to-right-* {
   --tw-exit-translate-x: --value([percentage], [length]);
 }
+/*
+  ---break---
+*/
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+	}
+  body {
+    @apply bg-background text-foreground;
+	}
+}

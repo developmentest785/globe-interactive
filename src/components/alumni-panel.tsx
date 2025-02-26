@@ -1,4 +1,4 @@
-import { Alumni } from "@/data/mockAlumni"
+import type { Alumni } from "@/data/mockAlumni"
 import { motion } from "framer-motion"
 import type { Feature } from "geojson"
 import { Linkedin, X } from "lucide-react"
@@ -19,13 +19,15 @@ export default function AlumniPanel({
 	const cityName = city.properties?.name
 	if (!cityName) return null
 
-	const countryFullName = city.properties?.adm0name
-
-	const countryAlumni = alumni.filter((a) => {
-		const cityAlumni = a.address.split(",")[0]
-		return cityAlumni.toLowerCase() === cityName.toLowerCase()
+	const cityAlumni = alumni.filter((alumnis) => {
+		const cityAlumni = alumnis.address.split(",")[0]
+		return (
+			cityAlumni.toLowerCase() === city.properties?.name.toLowerCase() &&
+			city.properties?.admin1_code &&
+			city.properties?.admin1_code === alumnis.address.split(",")[1].trim()
+		)
 	})
-	if (countryAlumni.length === 0) return null
+	if (cityAlumni.length === 0) return null
 
 	return (
 		<motion.div
@@ -33,13 +35,14 @@ export default function AlumniPanel({
 			animate={{ x: 0 }}
 			exit={{ x: "100%" }}
 			transition={{ type: "spring", damping: 20 }}
-			className="fixed inset-y-1/2 right-0 z-20 my-auto h-fit w-72 -translate-y-1/2 transform overflow-y-auto bg-white shadow-xl"
+			className="fixed inset-y-1/2 right-0 z-20 h-fit max-h-[80%] w-72 -translate-y-1/2 transform overflow-y-auto bg-white shadow-xl"
 		>
 			<div className="relative p-6">
 				<div className="flex flex-col justify-between">
 					<div className="flex items-center justify-between">
 						<h2 className="text-2xl font-bold text-gray-800">
-							{`${countryFullName}${countryAlumni.length ? "'s" : ""}`} Alumni
+							({cityAlumni.length}){`${cityName}${cityName.length ? "'s" : ""}`}{" "}
+							Alumni
 						</h2>
 						<button
 							type="button"
@@ -50,44 +53,39 @@ export default function AlumniPanel({
 							<X className="h-6 w-6 text-gray-600" />
 						</button>
 					</div>
-					<div className="mb-6 text-sm text-gray-500">
-						{countryAlumni.length} alumni from{" "}
-						{`${countryFullName} ${countryAlumni.length === 1 ? "is" : "are"}`}
-						{} part of our community.
-					</div>
 				</div>
 
 				<div className="space-y-6">
-					{countryAlumni.map((alumnus) => (
+					{cityAlumni.map((alumnis) => (
 						<div
-							key={`${alumnus.first} ${alumnus.last} - ${alumnus.title} -${alumnus.gradYear}`}
+							key={`${alumnis.first} ${alumnis.last} - ${alumnis.title} -${alumnis.gradYear}`}
 							className="rounded-lg bg-gray-50 p-2 shadow-xs transition-shadow hover:shadow-md"
 						>
-							{alumnus.imageUrl && (
+							{alumnis.imageUrl && (
 								<img
-									src={alumnus.imageUrl}
-									alt={alumnus.first}
+									src={alumnis.imageUrl}
+									alt={alumnis.first}
 									className="mb-4 h-32 w-32 rounded-full object-cover"
 								/>
 							)}
 							<div className="flex items-start space-x-4">
 								<div className="flex-1">
 									<h3 className="font-semibold text-gray-800">
-										{alumnus.first} {alumnus.last}
+										{alumnis.first} {alumnis.last}
 									</h3>
-									<p className="text-lg text-gray-600">{alumnus.title}</p>
-									<p className="text-lg text-gray-600">{alumnus.company}</p>
+									<p className="text-lg text-gray-600">{alumnis.title}</p>
+									<p className="text-lg text-gray-600">{alumnis.company}</p>
 									<div className="mt-2 flex items-center space-x-2">
 										<span className="text-lg text-gray-500">
-											Class of {alumnus.gradYear}
+											Class of {alumnis.gradYear}
 										</span>
-										{alumnus.linkedIn && (
+										{alumnis.linkedIn && (
 											<a
-												href={alumnus.linkedIn}
+												href={alumnis.linkedIn}
 												target="_blank"
 												rel="noopener noreferrer"
 												className="text-blue-600 hover:text-blue-700"
-												aria-label={`Visit ${alumnus.first}'s LinkedIn profile`}
+												aria-label={`Visit ${alumnis.first}'s LinkedIn profile`}
 											>
 												<Linkedin className="h-4 w-4" />
 											</a>
