@@ -22,7 +22,7 @@ export const mockAlumni: Alumni[] = [
     gradYear: "1991",
     address: "Elko New Market, MN",
     title: "Ex officio Board President",
-    imageUrl: `people/images/michael-johnston.jpg`,
+    imageUrl: `people/images/michael-johsnton.jpg`,
     details: `
  <p>Michael E. Johnston, DM, MBA, FACHE</p>
       <p>President, Southern Market</p>
