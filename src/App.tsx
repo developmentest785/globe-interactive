@@ -54,7 +54,7 @@ function App() {
   const [color, setColor] = useState("#0f0f0f");
   const [hexColor, setHexColor] = useState<string>("#0f0f0f");
   const [markerColor, setMarkerColor] = useState<string>("#b03c3c");
-  const [markerSize, setMarkerSize] = useState<number>(20);
+  const [markerSize, setMarkerSize] = useState<number>(12);
   const [selectedPreset, setSelectedPreset] = useState<number>(0);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [convertedOpen, setConvertedOpen] = useState<boolean>(false);
