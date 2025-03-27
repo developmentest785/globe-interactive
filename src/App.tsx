@@ -29,7 +29,6 @@ const initialState = {
 };
 
 function App() {
-  const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
   const [showExploreButton, setShowExploreButton] = useState<boolean>(true);
   const { selectedCity, setHoveredCity, setSelectedCity } = useCountryPicker();
   const inactivityTimerRef = useRef<ReturnType<typeof setTimeout>>();
