@@ -25,7 +25,7 @@ const initialState = {
   sky: 2,
   hexColor: "#0f0f0f",
   markerSize: 30,
-  resetTime: 5000,
+  resetTime: 30000,
 };
 
 function App() {
@@ -39,15 +39,15 @@ function App() {
     if (inactivityTimerRef.current) {
       clearTimeout(inactivityTimerRef.current);
     }
-    // setShowExploreButton(false);
+    setShowExploreButton(false);
 
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
-      // handleFullScreen();
+      handleFullScreen();
       setShowExploreButton(true);
       if (selectedCity) {
-        // setSelectedCity(null);
-        // setHoveredCity(null);
+        setSelectedCity(null);
+        setHoveredCity(null);
       }
     }, initialState.resetTime);
   };
@@ -87,7 +87,7 @@ function App() {
         <img src={logo} alt="Purdue University" className="w-48" />
         <div className="flex flex-col items-center gap-2">
           {/* QR Code */}
-          <div className="bg-[#F6E1B9] p-2 rounded-lg shadow-md">
+          <div className="bg-linear-to-br from-gray-200/80 to-gray-300/90 backdrop-filter backdrop-blur-md p-2 rounded-lg shadow-md">
             <PurdueQrCode className={cn("w-32 h-32")} />
           </div>
           <p className="text-center text-lg font-bold text-white">
