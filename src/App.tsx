@@ -35,15 +35,24 @@ function App() {
   const inactivityTimerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const resetInactivityTimer = () => {
-    console.log("activity timeer");
+    console.log("activity timer");
     if (inactivityTimerRef.current) {
       clearTimeout(inactivityTimerRef.current);
     }
     setShowExploreButton(false);
 
+    // Enter fullscreen if not already in fullscreen mode
+    if (!document.fullscreenElement) {
+      document.body
+        .requestFullscreen()
+        .then(() => setIsFullScreen(true))
+        .catch((err) =>
+          console.error("Error attempting to enable fullscreen:", err)
+        );
+    }
+
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
-      handleFullScreen();
       setShowExploreButton(true);
       if (selectedCity) {
         setSelectedCity(null);
@@ -61,15 +70,15 @@ function App() {
     };
   }, []);
 
-  const handleFullScreen = () => {
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-      setIsFullScreen(false);
-    } else {
-      document.body.requestFullscreen();
-      setIsFullScreen(true);
-    }
-  };
+  // const handleFullScreen = () => {
+  //   if (document.fullscreenElement) {
+  //     document.exitFullscreen();
+  //     setIsFullScreen(false);
+  //   } else {
+  //     document.body.requestFullscreen();
+  //     setIsFullScreen(true);
+  //   }
+  // };
 
   const handleScreenClick = () => {
     if (showExploreButton) {
@@ -109,7 +118,7 @@ function App() {
             <Button
               className={cn(
                 "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
-                "bg-linear-to-br from-[#CFB991] from-50% to-white",
+                "bg-linear-to-br from-[#CFB991] from-50% to-white"
               )}
               onClick={() => setShowExploreButton(false)}
             >
