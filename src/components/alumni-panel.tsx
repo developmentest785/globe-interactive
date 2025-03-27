@@ -49,7 +49,7 @@ export default function AlumniPanel({
       exit={{ y: "100%" }}
       // center align the panel
       className={cn(
-        "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg max-w-md max-h-[80%] z-20  w-[80%] overflow-y-auto",
+        "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg max-w-md max-h-7/12 z-20 w-[60%] overflow-y-auto",
         "bg-gradient-to-br from-gray-100/80 via-[#CFB991]/80 to-gray-100/80 bg-opacity-80 backdrop-blur-md border-orange-100/40 border",
         "scale-150",
       )}
