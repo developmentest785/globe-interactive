@@ -41,16 +41,6 @@ function App() {
     }
     setShowExploreButton(false);
 
-    // Enter fullscreen if not already in fullscreen mode
-    if (!document.fullscreenElement) {
-      document.body
-        .requestFullscreen()
-        .then(() => setIsFullScreen(true))
-        .catch((err) =>
-          console.error("Error attempting to enable fullscreen:", err)
-        );
-    }
-
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
       setShowExploreButton(true);
@@ -118,7 +108,8 @@ function App() {
             <Button
               className={cn(
                 "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
-                "bg-linear-to-br from-[#CFB991] from-50% to-white"
+                "bg-linear-to-br from-[#CFB991] from-50% to-white",
+                "scale-150",
               )}
               onClick={() => setShowExploreButton(false)}
             >
