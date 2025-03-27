@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'United Sans Rg Md';
+    src: local('United Sans Reg Medium'), local('UnitedSansReg-Medium'),
+        url('UnitedSansReg-Medium.woff2') format('woff2'),
+        url('UnitedSansReg-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'United Sans Rg Hv';
+    src: local('United Sans Reg Heavy'), local('UnitedSansReg-Heavy'),
+        url('UnitedSansReg-Heavy.woff2') format('woff2'),
+        url('UnitedSansReg-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'United Sans Rg Lt';
+    src: local('United Sans Reg Light'), local('UnitedSansReg-Light'),
+        url('UnitedSansReg-Light.woff2') format('woff2'),
+        url('UnitedSansReg-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'United Sans Rg Bd';
+    src: local('United Sans Reg Bold'), local('UnitedSansReg-Bold'),
+        url('UnitedSansReg-Bold.woff2') format('woff2'),
+        url('UnitedSansReg-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'United Sans Rg Bk';
+    src: local('United Sans Reg Black'), local('UnitedSansReg-Black'),
+        url('UnitedSansReg-Black.woff2') format('woff2'),
+        url('UnitedSansReg-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

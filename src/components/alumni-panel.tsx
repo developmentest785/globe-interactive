@@ -1,8 +1,11 @@
 import type { Alumni } from "@/data/mockAlumni";
+import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Feature } from "geojson";
-import { Linkedin, X, ArrowLeft } from "lucide-react";
+import { Linkedin, X, ArrowLeft, MapPinIcon, UserIcon } from "lucide-react";
 import { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Button } from "./ui/button";
 
 interface AlumniPanelProps {
   city: Feature | null;
@@ -38,7 +41,10 @@ export default function AlumniPanel({
       animate={{ y: 0 }}
       exit={{ y: "100%" }}
       // center align the panel
-      className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-sm max-w-md max-h-[80%] z-20 bg-white w-[80%] overflow-y-auto"
+      className={cn(
+        "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg max-w-md max-h-[80%] z-20  w-[80%] overflow-y-auto",
+        "bg-gradient-to-br from-gray-100/80 via-[#CFB991]/80 to-gray-100/80 bg-opacity-80 backdrop-blur-md border-orange-100 border",
+      )}
       // className="fixed transform translate rounded-sm z-20 h-fit max-h-[80%] overflow-y-auto bg-white shadow-xl"
     >
       <AnimatePresence mode="wait">
@@ -138,10 +144,15 @@ export default function AlumniPanel({
           >
             <div className="flex flex-col justify-between">
               <div className="flex items-center justify-between">
-                <h2 className="text-xl text-gray-800">
-                  ({cityAlumni.length}){" "}
-                  {`${cityName}${cityName.length ? "'s" : ""}`} Alumni
-                </h2>
+                <div className="flex flex-col gap-1.5">
+                  <h2 className="text-5xl text-black">
+                    {cityAlumni.length} Alumni
+                  </h2>
+                  <div className="flex gap-1">
+                    <MapPinIcon className="w-7 h-7" />
+                    <p className="text-2xl">{`${cityName}`} </p>
+                  </div>
+                </div>
                 <button
                   type="button"
                   onClick={onClose}
@@ -157,22 +168,21 @@ export default function AlumniPanel({
               {cityAlumni.map((alumnis) => (
                 <div
                   key={`${alumnis.first} ${alumnis.last} - ${alumnis.title} -${alumnis.gradYear}`}
-                  className="rounded-lg bg-gray-50 p-4 shadow-xs transition-shadow hover:shadow-md"
+                  className="rounded-lg backdrop-filter bg-gray-100/70 backdrop-blur-md backdrop-opacity-80 p-4 shadow-xs transition-shadow hover:shadow-md"
                 >
                   <div className="flex items-start space-x-4">
-                    {alumnis.imageUrl && (
-                      <img
-                        src={alumnis.imageUrl}
-                        alt={alumnis.first}
-                        className="h-16 w-16 rounded-full object-cover"
-                      />
-                    )}
+                    <Avatar className="w-20 h-20">
+                      <AvatarImage src={alumnis.imageUrl} alt={alumnis.first} />
+                      <AvatarFallback>
+                        <UserIcon />
+                      </AvatarFallback>
+                    </Avatar>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-800">
+                      <h3 className="text-2xl font-bold">
                         {alumnis.first} {alumnis.last}
                       </h3>
-                      <p className="text-sm text-gray-600">{alumnis.title}</p>
-                      <p className="text-sm text-gray-600">{alumnis.company}</p>
+                      <p className="text-xl font-medium">{alumnis.title}</p>
+                      <p className="text-xl">{alumnis.company}</p>
                       <div className="flex items-center space-x-2">
                         <span className="text-xs text-gray-500">
                           Class of {alumnis.gradYear}
@@ -190,12 +200,9 @@ export default function AlumniPanel({
                         )}
                       </div>
                       {alumnis.details && (
-                        <button
-                          onClick={() => setSelectedAlumni(alumnis)}
-                          className="mt-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
-                        >
+                        <Button onClick={() => setSelectedAlumni(alumnis)}>
                           Read more
-                        </button>
+                        </Button>
                       )}
                     </div>
                   </div>
