@@ -25,7 +25,7 @@ const initialState = {
   sky: 2,
   hexColor: "#0f0f0f",
   markerSize: 30,
-  resetTime: 5000,
+  resetTime: 20000,
 };
 
 function App() {
