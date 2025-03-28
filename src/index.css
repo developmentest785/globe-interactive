@@ -5,8 +5,8 @@
 @font-face {
   font-family: "United Sans";
   src: local("United Sans Reg Medium"), local("UnitedSansReg-Medium"),
-    url("../public/font/UnitedSansReg-Medium.woff2") format("woff2"),
-    url("../public/font/UnitedSansReg-Medium.woff") format("woff");
+    url("../font/UnitedSansReg-Medium.woff2") format("woff2"),
+    url("../font/UnitedSansReg-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -15,8 +15,8 @@
 @font-face {
   font-family: "United Sans";
   src: local("United Sans Reg Heavy"), local("UnitedSansReg-Heavy"),
-    url("../public/font/UnitedSansReg-Heavy.woff2") format("woff2"),
-    url("../public/font/UnitedSansReg-Heavy.woff") format("woff");
+    url("../font/UnitedSansReg-Heavy.woff2") format("woff2"),
+    url("../font/UnitedSansReg-Heavy.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -25,8 +25,8 @@
 @font-face {
   font-family: "United Sans";
   src: local("United Sans Reg Light"), local("UnitedSansReg-Light"),
-    url("../public/font/UnitedSansReg-Light.woff2") format("woff2"),
-    url("../public/font/UnitedSansReg-Light.woff") format("woff");
+    url("../font/UnitedSansReg-Light.woff2") format("woff2"),
+    url("../font/UnitedSansReg-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -35,8 +35,8 @@
 @font-face {
   font-family: "United Sans";
   src: local("United Sans Reg Bold"), local("UnitedSansReg-Bold"),
-    url("../public/font/UnitedSansReg-Bold.woff2") format("woff2"),
-    url("../public/font/UnitedSansReg-Bold.woff") format("woff");
+    url("../font/UnitedSansReg-Bold.woff2") format("woff2"),
+    url("../font/UnitedSansReg-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -45,8 +45,8 @@
 @font-face {
   font-family: "United Sans";
   src: local("United Sans Reg Black"), local("UnitedSansReg-Black"),
-    url("../public/font/UnitedSansReg-Black.woff2") format("woff2"),
-    url("../public/font/UnitedSansReg-Black.woff") format("woff");
+    url("../font/UnitedSansReg-Black.woff2") format("woff2"),
+    url("../font/UnitedSansReg-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;

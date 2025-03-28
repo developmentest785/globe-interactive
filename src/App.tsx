@@ -46,12 +46,11 @@ function App() {
     }
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
-      setShowExploreButton(true);
-      setIsInactive(true);
       if (selectedCity) {
         setSelectedCity(null);
-        setHoveredCity(null);
       }
+      setShowExploreButton(true);
+      setIsInactive(true);
     }, initialState.resetTime);
   };
 
@@ -140,7 +139,7 @@ function App() {
                 className={cn(
                   "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
                   "bg-linear-to-br from-[#CFB991] from-50% to-white",
-                  "scale-150 mt-36"
+                  "scale-150 mt-36",
                 )}
                 onClick={() => {
                   setShowExploreButton(false);
