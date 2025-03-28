@@ -31,6 +31,7 @@ const initialState = {
 function App() {
   const [showExploreButton, setShowExploreButton] = useState<boolean>(true);
   const [isInactive, setIsInactive] = useState<boolean>(true);
+  const initialRender = useRef(true);
   const { selectedCity, setHoveredCity, setSelectedCity } = useCountryPicker();
   const inactivityTimerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -39,9 +40,10 @@ function App() {
     if (inactivityTimerRef.current) {
       clearTimeout(inactivityTimerRef.current);
     }
-    setShowExploreButton(false);
-    setIsInactive(false);
-
+    if (!initialRender.current) {
+      setShowExploreButton(false);
+      setIsInactive(false);
+    }
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
       setShowExploreButton(true);
@@ -54,7 +56,11 @@ function App() {
   };
 
   useEffect(() => {
-    resetInactivityTimer();
+    if (initialRender.current) {
+      initialRender.current = false;
+    } else {
+      resetInactivityTimer();
+    }
     return () => {
       if (inactivityTimerRef.current) {
         clearTimeout(inactivityTimerRef.current);
@@ -98,22 +104,25 @@ function App() {
           transition={{ duration: 0.5 }}
         />
 
-      <AnimatePresence>
-        {!isInactive &&(
-        <motion.div className="flex flex-col items-center gap-2"
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
-          exit={{ opacity: 0}}
-          transition={{ duration: 0.5}}
-        >
-          {/* QR Code */}
-          <div className="bg-linear-to-br from-gray-200/80 to-gray-300/90 backdrop-filter backdrop-blur-md p-2 rounded-lg shadow-md">
-            <PurdueQrCode className={cn("w-32 h-32")} />
-          </div>
-          <p className="text-center text-lg font-bold text-white">
-            Scan & Donate
-          </p>
-        </motion.div>)}</AnimatePresence>
+        <AnimatePresence>
+          {!isInactive && (
+            <motion.div
+              className="flex flex-col items-center gap-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {/* QR Code */}
+              <div className="bg-linear-to-br from-gray-200/80 to-gray-300/90 backdrop-filter backdrop-blur-md p-2 rounded-lg shadow-md">
+                <PurdueQrCode className={cn("w-32 h-32")} />
+              </div>
+              <p className="text-center text-lg font-bold text-white">
+                Scan & Donate
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Inactive Overlay */}
@@ -131,7 +140,7 @@ function App() {
                 className={cn(
                   "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
                   "bg-linear-to-br from-[#CFB991] from-50% to-white",
-                  "scale-150 mt-36",
+                  "scale-150 mt-36"
                 )}
                 onClick={() => {
                   setShowExploreButton(false);
