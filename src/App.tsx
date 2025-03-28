@@ -25,11 +25,12 @@ const initialState = {
   sky: 2,
   hexColor: "#0f0f0f",
   markerSize: 30,
-  resetTime: 30000,
+  resetTime: 5000,
 };
 
 function App() {
   const [showExploreButton, setShowExploreButton] = useState<boolean>(true);
+  const [isInactive, setIsInactive] = useState<boolean>(true);
   const { selectedCity, setHoveredCity, setSelectedCity } = useCountryPicker();
   const inactivityTimerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -39,10 +40,12 @@ function App() {
       clearTimeout(inactivityTimerRef.current);
     }
     setShowExploreButton(false);
+    setIsInactive(false);
 
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
       setShowExploreButton(true);
+      setIsInactive(true);
       if (selectedCity) {
         setSelectedCity(null);
         setHoveredCity(null);
@@ -72,6 +75,7 @@ function App() {
   const handleScreenClick = () => {
     if (showExploreButton) {
       setShowExploreButton(false);
+      setIsInactive(false);
       resetInactivityTimer();
     }
   };
@@ -82,7 +86,17 @@ function App() {
 
       {/* Top Bar with Logo and Controls */}
       <div className="absolute top-0 left-0 right-0 z-20 flex justify-between items-start p-6">
-        <img src={logo} alt="Purdue University" className="w-48" />
+        <motion.img
+          src={logo}
+          alt="Purdue University"
+          className="w-48"
+          animate={{
+            x: isInactive ? "calc(50vw - 7rem)" : 0,
+            y: isInactive ? "calc(50vh - 10rem)" : 0,
+            scale: isInactive ? 1.5 : 1,
+          }}
+          transition={{ duration: 0.5 }}
+        />
         <div className="flex flex-col items-center gap-2">
           {/* QR Code */}
           <div className="bg-linear-to-br from-gray-200/80 to-gray-300/90 backdrop-filter backdrop-blur-md p-2 rounded-lg shadow-md">
@@ -94,26 +108,32 @@ function App() {
         </div>
       </div>
 
-      {/* Explore Button */}
+      {/* Inactive Overlay */}
       <AnimatePresence>
-        {showExploreButton && (
+        {isInactive && (
           <motion.div
-            className="absolute left-1/2 bottom-12 -translate-x-1/2 z-20"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
+            className="absolute inset-0 z-10 bg-black/30 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Button
-              className={cn(
-                "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
-                "bg-linear-to-br from-[#CFB991] from-50% to-white",
-                "scale-150",
-              )}
-              onClick={() => setShowExploreButton(false)}
-            >
-              Click to Explore
-            </Button>
+            <div className="absolute inset-0 flex flex-col pt-36 items-center justify-center">
+              <Button
+                className={cn(
+                  "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
+                  "bg-linear-to-br from-[#CFB991] from-50% to-white",
+                  "scale-150 mt-36",
+                )}
+                onClick={() => {
+                  setShowExploreButton(false);
+                  setIsInactive(false);
+                  resetInactivityTimer();
+                }}
+              >
+                Click to Explore
+              </Button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
