@@ -97,7 +97,15 @@ function App() {
           }}
           transition={{ duration: 0.5 }}
         />
-        <div className="flex flex-col items-center gap-2">
+
+      <AnimatePresence>
+        {!isInactive &&(
+        <motion.div className="flex flex-col items-center gap-2"
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          exit={{ opacity: 0}}
+          transition={{ duration: 0.5}}
+        >
           {/* QR Code */}
           <div className="bg-linear-to-br from-gray-200/80 to-gray-300/90 backdrop-filter backdrop-blur-md p-2 rounded-lg shadow-md">
             <PurdueQrCode className={cn("w-32 h-32")} />
@@ -105,7 +113,7 @@ function App() {
           <p className="text-center text-lg font-bold text-white">
             Scan & Donate
           </p>
-        </div>
+        </motion.div>)}</AnimatePresence>
       </div>
 
       {/* Inactive Overlay */}
