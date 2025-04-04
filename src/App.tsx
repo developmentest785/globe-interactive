@@ -42,16 +42,16 @@ function App() {
       clearTimeout(inactivityTimerRef.current);
     }
     if (!initialRender.current) {
-      // setShowExploreButton(false);
-      // setIsInactive(false);
+      setShowExploreButton(false);
+      setIsInactive(false);
     }
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
       if (selectedCity) {
         setSelectedCity(null);
       }
-      // setShowExploreButton(true);
-      // setIsInactive(true);
+      setShowExploreButton(true);
+      setIsInactive(true);
     }, initialState.resetTime);
   };
 
