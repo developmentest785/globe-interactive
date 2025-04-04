@@ -16,9 +16,10 @@ import bg1 from "@/assets/earth-blue-marble.jpg";
 import sky2 from "@/assets/night-sky.png";
 
 // logo purdue
-import logo from "@/assets/logo.png";
 import PurdueQrCode from "@/components/purdue-qrcode";
 import { Button } from "./components/ui/button";
+
+import partnerLogo from "@/assets/partner-logo.webp";
 
 const initialState = {
   background: 0,
@@ -204,6 +205,33 @@ function App() {
           />
         </AnimatePresence>
       )}
+
+      <div className="fixed -bottom-2 -right-2 z-50 w-64 h-64">
+        <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-message-circle-icon lucide-message-circle transform scale-x-[-1] stroke-[#CFB991] inset-0 absolute z-0"
+          >
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+          </svg>
+          <div className="flex flex-col items-center gap-1 px-2 relative z-10">
+            <span className="text-xl font-bold">Powered by</span>
+            <div className="flex items-center gap-1">
+              <img
+                src={partnerLogo}
+                alt="Partner Logo"
+                className="w-36 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
