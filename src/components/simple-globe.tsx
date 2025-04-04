@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import cloudImg from "@/assets/clouds.png";
 import bump from "@/assets/earth-topology.png";
 
-interface SimpleGlobeProps {
+interface SimpleGlobeProps extends React.HTMLProps<HTMLDivElement> {
   background: string;
   globeImg: string;
   markerSize: number;
@@ -27,6 +27,7 @@ function SimpleGlobe({
   hexColor,
   onGlobeReset,
   onUserInteraction,
+  className,
 }: SimpleGlobeProps) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const { countries, cities, selectedCountry, selectedCity, setSelectedCity } =
@@ -36,8 +37,8 @@ function SimpleGlobe({
   const INIT_GLOBE = {
     lat: 0,
     lng: 0,
-    altitude: 3,
-    selectedAltitude: 3,
+    altitude: 3.1,
+    selectedAltitude: 3.1,
     animDuration: 1500,
   };
 
@@ -66,12 +67,12 @@ function SimpleGlobe({
           new THREE.SphereGeometry(
             globe.getGlobeRadius() * (1 + CLOUDS_ALT),
             75,
-            75
+            75,
           ),
           new THREE.MeshPhongMaterial({
             map: cloudsTexture,
             transparent: true,
-          })
+          }),
         );
         globe.scene().add(clouds);
         (function rotateClouds() {
@@ -126,7 +127,7 @@ function SimpleGlobe({
           // @ts-expect-error - ignore
           lat: d.lat,
         },
-        INIT_GLOBE.animDuration
+        INIT_GLOBE.animDuration,
       );
     }
     return null;
@@ -183,22 +184,22 @@ function SimpleGlobe({
           lat: 0,
           altitude: INIT_GLOBE.altitude,
         },
-        INIT_GLOBE.animDuration
+        INIT_GLOBE.animDuration,
       );
       onGlobeReset?.();
     }
   }, [selectedCity]);
 
   return (
-    <div className={cn("relative h-screen w-full")}>
+    <div className={cn("relative", className)}>
       <Globe
         ref={globeRef}
         animateIn={false}
         backgroundImageUrl={background}
         globeImageUrl={globeImg}
         bumpImageUrl={bump}
-        width={window.innerWidth | width}
-        height={window.innerHeight | height}
+        width={(window.innerWidth | width) - 32}
+        height={(window.innerHeight | height) - 32}
         waitForGlobeReady={true}
         atmosphereAltitude={0.15}
         atmosphereColor="#aaa"
