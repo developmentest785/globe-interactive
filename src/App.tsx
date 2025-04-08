@@ -88,20 +88,41 @@ function App() {
 
   return (
     <div
-      className={cn("relative h-screen w-full border-12 border-[#CFB991]")}
+      className={cn("relative h-screen w-full border-12")}
       onClick={handleScreenClick}
+      style={{ borderImage: `url('./public/pattern.png') 12 repeat` }}
     >
-      <div className="inset-0 pointer-events-none absolute z-10 bg-linear-to-br from-transparent via-transparent via-75% to-180% to-[#CFB991]" />
+      <div className="inset-0 pointer-events-none absolute z-10  bg-linear-to-br from-transparent via-transparent via-75% to-180% to-[#CFB991]" />
 
       {/* Top Bar with Logo and Controls */}
       <div className="absolute top-0 left-0 right-0 z-20 flex justify-between items-start p-6">
+        <AnimatePresence>
+          {!isInactive && (
+            <div className="fixed -top-0.5 -left-0.5 z-0 w-58 h-58">
+              <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-message-circle-icon lucide-message-circle transform rotate-90 stroke-[#CFB991] inset-0 absolute z-0"
+                >
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                </svg>
+              </div>
+            </div>
+          )}
+        </AnimatePresence>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 323 256"
-          className="w-48"
+          className="w-32"
           animate={{
-            x: isInactive ? "calc(50vw - 7.5rem)" : 0,
-            y: isInactive ? "calc(50vh - 16rem)" : 0,
+            x: isInactive ? "calc(50vw - 7.5rem)" : 16,
+            y: isInactive ? "calc(50vh - 16rem)" : 18,
             scale: isInactive ? 2.5 : 1,
           }}
           transition={{ duration: 0.5 }}
@@ -164,7 +185,7 @@ function App() {
                 className={cn(
                   "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
                   "bg-linear-to-br from-[#CFB991] from-50% to-white",
-                  "scale-150 mt-36",
+                  "scale-150 mt-36"
                 )}
                 onClick={() => {
                   setShowExploreButton(false);
@@ -206,7 +227,7 @@ function App() {
         </AnimatePresence>
       )}
 
-      <div className="fixed -bottom-2 -right-2 z-50 w-64 h-64">
+      <div className="fixed bottom-0.5 right-0.5 z-50 w-36 h-36">
         <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -220,13 +241,13 @@ function App() {
           >
             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
           </svg>
-          <div className="flex flex-col items-center gap-1 px-2 relative z-10">
-            <span className="text-xl font-bold">Powered by</span>
-            <div className="flex items-center gap-1">
+          <div className="flex flex-col items-center gap-0 px-2 relative z-10">
+            <span className="font-xs font-bold">Powered by</span>
+            <div className="flex items-center">
               <img
                 src={partnerLogo}
                 alt="Partner Logo"
-                className="w-36 object-contain"
+                className="w-20 object-contain"
               />
             </div>
           </div>

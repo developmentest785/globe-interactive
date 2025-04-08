@@ -30,7 +30,7 @@ function SimpleGlobe({
   className,
 }: SimpleGlobeProps) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
-  const { countries, cities, selectedCountry, selectedCity, setSelectedCity } =
+  const { cities, selectedCity, setSelectedCity } =
     useCountryPicker();
   const { width, height } = useViewport();
 
@@ -157,7 +157,7 @@ function SimpleGlobe({
             cityAlumni.toLowerCase() === city.properties?.name.toLowerCase() &&
             city.properties?.admin1_code &&
             city.properties?.admin1_code ===
-              alumnis.address.split(",")[1].trim()
+            alumnis.address.split(",")[1].trim()
           );
         });
         if (alumni.length > 0) {
@@ -203,23 +203,6 @@ function SimpleGlobe({
         waitForGlobeReady={true}
         atmosphereAltitude={0.15}
         atmosphereColor="#aaa"
-        hexPolygonsData={countries?.features}
-        hexPolygonResolution={3}
-        hexPolygonMargin={0.2}
-        hexPolygonUseDots={false}
-        onHexPolygonHover={(_d) => {
-          onUserInteraction?.();
-        }}
-        hexMargin={0.2}
-        hexPolygonsTransitionDuration={300}
-        hexPolygonColor={(d) => {
-          switch (d) {
-            case selectedCountry:
-              return hexColor;
-            default:
-              return hexColor;
-          }
-        }}
         onGlobeClick={() => {
           onUserInteraction?.();
         }}
