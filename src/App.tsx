@@ -42,16 +42,16 @@ function App() {
       clearTimeout(inactivityTimerRef.current);
     }
     if (!initialRender.current) {
-      setShowExploreButton(false);
-      setIsInactive(false);
+      // setShowExploreButton(false);
+      // setIsInactive(false);
     }
     inactivityTimerRef.current = setTimeout(() => {
       console.log("timeout");
       if (selectedCity) {
         setSelectedCity(null);
       }
-      setShowExploreButton(true);
-      setIsInactive(true);
+      // setShowExploreButton(true);
+      // setIsInactive(true);
     }, initialState.resetTime);
   };
 
@@ -121,9 +121,9 @@ function App() {
           viewBox="0 0 323 256"
           className="w-32"
           animate={{
-            x: isInactive ? "calc(50vw - 7.5rem)" : 16,
+            x: isInactive ? "calc(50vw - 6rem)" : 16,
             y: isInactive ? "calc(50vh - 16rem)" : 18,
-            scale: isInactive ? 2.5 : 1,
+            scale: isInactive ? 4.2 : 1,
           }}
           transition={{ duration: 0.5 }}
         >
