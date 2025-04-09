@@ -90,7 +90,7 @@ function App() {
     <div
       className={cn("relative h-screen w-full border-12")}
       onClick={handleScreenClick}
-      style={{ borderImage: `url('./public/pattern.png') 12 repeat` }}
+      style={{ borderImage: `url('/pattern.png') 12 repeat` }}
     >
       <div className="inset-0 pointer-events-none absolute z-10  bg-linear-to-br from-transparent via-transparent via-75% to-180% to-[#CFB991]" />
 
