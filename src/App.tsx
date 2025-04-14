@@ -88,9 +88,8 @@ function App() {
 
   return (
     <div
-      className={cn("relative h-screen w-full border-12")}
+      className={cn("relative h-screen w-full border-12 border-[#CFB991]")}
       onClick={handleScreenClick}
-      style={{ borderImage: `url('/pattern.png') 12 repeat` }}
     >
       <div className="inset-0 pointer-events-none absolute z-10  bg-linear-to-br from-transparent via-transparent via-75% to-180% to-[#CFB991]" />
 
@@ -98,20 +97,8 @@ function App() {
       <div className="absolute top-0 left-0 right-0 z-20 flex justify-between items-start p-6">
         <AnimatePresence>
           {!isInactive && (
-            <div className="fixed -top-0.5 -left-0.5 z-0 w-58 h-58">
-              <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-message-circle-icon lucide-message-circle transform rotate-90 stroke-[#CFB991] inset-0 absolute z-0"
-                >
-                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                </svg>
+            <div className="fixed top-3 left-12 z-0 w-42 h-42 after:bg-[#CFB991] after:content-[''] after:absolute after:inset-0 after:rounded-full after:-left-9 after:top-0 after:w-20 after:h-20">
+              <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full bg-[#CFB991]">
               </div>
             </div>
           )}
@@ -121,8 +108,8 @@ function App() {
           viewBox="0 0 323 256"
           className="w-32"
           animate={{
-            x: isInactive ? "calc(50vw - 6rem)" : 16,
-            y: isInactive ? "calc(50vh - 16rem)" : 18,
+            x: isInactive ? "calc(50vw - 6rem)" : 32,
+            y: isInactive ? "calc(50vh - 16rem)" : 0,
             scale: isInactive ? 4.2 : 1,
           }}
           transition={{ duration: 0.5 }}
@@ -227,27 +214,15 @@ function App() {
         </AnimatePresence>
       )}
 
-      <div className="fixed bottom-0.5 right-0.5 z-50 w-36 h-36">
-        <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-message-circle-icon lucide-message-circle transform scale-x-[-1] stroke-[#CFB991] inset-0 absolute z-0"
-          >
-            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-          </svg>
+      <div className="fixed bottom-3 right-8 z-50 w-30 h-30">
+        <div className="flex items-center justify-center text-white relative w-full h-full bg-[#CFB991] rounded-full after:bg-[#CFB991] after:absolute after:rounded-full after:-right-5 after:bottom-0 after:w-12 after:h-12">
           <div className="flex flex-col items-center gap-0 px-2 relative z-10">
             <span className="font-xs font-bold">Powered by</span>
             <div className="flex items-center">
               <img
                 src={partnerLogo}
                 alt="Partner Logo"
-                className="w-20 object-contain"
+                className="w-24 object-contain"
               />
             </div>
           </div>

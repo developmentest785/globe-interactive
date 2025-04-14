@@ -52,8 +52,9 @@ export default function AlumniPanel({
         "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg max-w-md max-h-7/12 z-20 w-[60%] overflow-y-auto",
         "bg-gradient-to-br from-gray-100/80 via-[#CFB991]/80 to-gray-100/80 bg-opacity-80 backdrop-blur-md border-orange-100/40 border",
         "scale-150",
+        "border-[#CFB991] border-4"
       )}
-      // className="fixed transform translate rounded-sm z-20 h-fit max-h-[80%] overflow-y-auto bg-white shadow-xl"
+    // className="fixed transform translate rounded-sm z-20 h-fit max-h-[80%] overflow-y-auto bg-white shadow-xl"
     >
       <AnimatePresence mode="wait">
         {selectedAlumni ? (
@@ -62,7 +63,7 @@ export default function AlumniPanel({
             initial={{ opacity: 0, y: "100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "100%" }}
-            className="relative p-6"
+            className="relative p-6 rounded-lg"
           >
             <div className="flex items-center justify-between mb-4">
               <Button
@@ -108,9 +109,9 @@ export default function AlumniPanel({
         ) : (
           <motion.div
             key="list"
-            initial={{ opacity: 0, x: "-100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "-100%" }}
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
             className="relative p-6"
           >
             <div className="flex flex-col justify-between">
