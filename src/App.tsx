@@ -54,20 +54,20 @@ function App() {
       setIsInactive(true);
     }, initialState.resetTime);
   };
-
-  useEffect(() => {
-    if (initialRender.current) {
-      initialRender.current = false;
-    } else {
-      resetInactivityTimer();
-    }
-    return () => {
-      if (inactivityTimerRef.current) {
-        clearTimeout(inactivityTimerRef.current);
-      }
-    };
-  }, []);
-
+  //
+  // useEffect(() => {
+  //   if (initialRender.current) {
+  //     initialRender.current = false;
+  //   } else {
+  //     resetInactivityTimer();
+  //   }
+  //   return () => {
+  //     if (inactivityTimerRef.current) {
+  //       clearTimeout(inactivityTimerRef.current);
+  //     }
+  //   };
+  // }, []);
+  //
   // const handleFullScreen = () => {
   //   if (document.fullscreenElement) {
   //     document.exitFullscreen();
@@ -98,8 +98,7 @@ function App() {
         <AnimatePresence>
           {!isInactive && (
             <div className="fixed top-3 left-12 z-0 w-42 h-42 after:bg-[#CFB991] after:content-[''] after:absolute after:inset-0 after:rounded-full after:-left-9 after:top-0 after:w-20 after:h-20">
-              <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full bg-[#CFB991]">
-              </div>
+              <div className="flex items-center justify-center text-white  relative w-full h-full rounded-full bg-[#CFB991]"></div>
             </div>
           )}
         </AnimatePresence>
@@ -172,7 +171,7 @@ function App() {
                 className={cn(
                   "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
                   "bg-linear-to-br from-[#CFB991] from-50% to-white",
-                  "scale-150 mt-36"
+                  "scale-150 mt-36",
                 )}
                 onClick={() => {
                   setShowExploreButton(false);
@@ -214,15 +213,15 @@ function App() {
         </AnimatePresence>
       )}
 
-      <div className="fixed bottom-3 right-8 z-50 w-30 h-30">
-        <div className="flex items-center justify-center text-white relative w-full h-full bg-[#CFB991] rounded-full after:bg-[#CFB991] after:absolute after:rounded-full after:-right-5 after:bottom-0 after:w-12 after:h-12">
+      <div className="fixed bottom-3 right-8 z-50 w-26 h-26">
+        <div className="flex items-center justify-center text-white relative w-full h-full bg-[#CFB991] rounded-full after:bg-[#CFB991] after:absolute after:rounded-full after:-right-5 after:bottom-0 after:w-10 after:h-10">
           <div className="flex flex-col items-center gap-0 px-2 relative z-10">
-            <span className="font-xs font-bold">Powered by</span>
+            <span className="text-xs font-bold">Powered by</span>
             <div className="flex items-center">
               <img
                 src={partnerLogo}
                 alt="Partner Logo"
-                className="w-24 object-contain"
+                className="w-20 object-contain"
               />
             </div>
           </div>
