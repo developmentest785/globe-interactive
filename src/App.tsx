@@ -55,18 +55,18 @@ function App() {
     }, initialState.resetTime);
   };
   //
-  // useEffect(() => {
-  //   if (initialRender.current) {
-  //     initialRender.current = false;
-  //   } else {
-  //     resetInactivityTimer();
-  //   }
-  //   return () => {
-  //     if (inactivityTimerRef.current) {
-  //       clearTimeout(inactivityTimerRef.current);
-  //     }
-  //   };
-  // }, []);
+  useEffect(() => {
+    if (initialRender.current) {
+      initialRender.current = false;
+    } else {
+      resetInactivityTimer();
+    }
+    return () => {
+      if (inactivityTimerRef.current) {
+        clearTimeout(inactivityTimerRef.current);
+      }
+    };
+  }, []);
   //
   // const handleFullScreen = () => {
   //   if (document.fullscreenElement) {
