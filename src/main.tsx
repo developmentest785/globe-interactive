@@ -1,13 +1,22 @@
-import { createRoot } from "react-dom/client"
+import { createRoot } from "react-dom/client";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
 
-import "./index.css"
+import "./index.css";
 
-import { CountryPickerProvider } from "@/hooks/use-country-picker.tsx"
+import { routeTree } from "./routeTree.gen.ts";
 
-import App from "./App.tsx"
+const router = createRouter({ routeTree });
+
+import { CountryPickerProvider } from "@/hooks/use-country-picker.tsx";
+
+declare module "@tanstack/react-router" {
+  interface RegisterRouter {
+    routeTree: typeof routeTree;
+  }
+}
 
 createRoot(document.getElementById("root")!).render(
-	<CountryPickerProvider>
-		<App />
-	</CountryPickerProvider>
-)
+  <CountryPickerProvider>
+    <RouterProvider router={router} />
+  </CountryPickerProvider>
+);

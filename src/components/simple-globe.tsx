@@ -30,8 +30,7 @@ function SimpleGlobe({
   className,
 }: SimpleGlobeProps) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
-  const { cities, selectedCity, setSelectedCity } =
-    useCountryPicker();
+  const { cities, selectedCity, setSelectedCity } = useCountryPicker();
   const { width, height } = useViewport();
 
   const INIT_GLOBE = {
@@ -67,12 +66,12 @@ function SimpleGlobe({
           new THREE.SphereGeometry(
             globe.getGlobeRadius() * (1 + CLOUDS_ALT),
             75,
-            75,
+            75
           ),
           new THREE.MeshPhongMaterial({
             map: cloudsTexture,
             transparent: true,
-          }),
+          })
         );
         globe.scene().add(clouds);
         (function rotateClouds() {
@@ -127,7 +126,7 @@ function SimpleGlobe({
           // @ts-expect-error - ignore
           lat: d.lat,
         },
-        INIT_GLOBE.animDuration,
+        INIT_GLOBE.animDuration
       );
     }
     return null;
@@ -157,7 +156,7 @@ function SimpleGlobe({
             cityAlumni.toLowerCase() === city.properties?.name.toLowerCase() &&
             city.properties?.admin1_code &&
             city.properties?.admin1_code ===
-            alumnis.address.split(",")[1].trim()
+              alumnis.address.split(",")[1].trim()
           );
         });
         if (alumni.length > 0) {
@@ -184,7 +183,7 @@ function SimpleGlobe({
           lat: 0,
           altitude: INIT_GLOBE.altitude,
         },
-        INIT_GLOBE.animDuration,
+        INIT_GLOBE.animDuration
       );
       onGlobeReset?.();
     }
@@ -207,7 +206,7 @@ function SimpleGlobe({
           onUserInteraction?.();
         }}
         onGlobeReady={onGlobeReady}
-        htmlElementsData={updatedCities}
+        htmlElementsData={updatedCities || []}
         htmlElement={createMarkerElement}
       />
     </div>

@@ -1,3 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
 import { mockAlumni } from "@/data/mockAlumni";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -17,9 +18,13 @@ import sky2 from "@/assets/night-sky.png";
 
 // logo purdue
 import PurdueQrCode from "@/components/purdue-qrcode";
-import { Button } from "./components/ui/button";
+import { Button } from "@/components/ui/button";
 
 import partnerLogo from "@/assets/partner-logo.webp";
+
+export const Route = createFileRoute("/")({
+  component: Globe,
+});
 
 const initialState = {
   background: 0,
@@ -29,7 +34,7 @@ const initialState = {
   resetTime: 20000,
 };
 
-function App() {
+function Globe() {
   const [showExploreButton, setShowExploreButton] = useState<boolean>(true);
   const [isInactive, setIsInactive] = useState<boolean>(true);
   const initialRender = useRef(true);
@@ -171,7 +176,7 @@ function App() {
                 className={cn(
                   "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
                   "bg-linear-to-br from-[#CFB991] from-50% to-white",
-                  "scale-150 mt-36",
+                  "scale-150 mt-36"
                 )}
                 onClick={() => {
                   setShowExploreButton(false);
@@ -230,5 +235,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
