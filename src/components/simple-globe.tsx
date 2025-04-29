@@ -24,7 +24,6 @@ function SimpleGlobe({
   background,
   globeImg,
   markerSize,
-  hexColor,
   onGlobeReset,
   onUserInteraction,
   className,
@@ -83,7 +82,7 @@ function SimpleGlobe({
   };
 
   // @ts-ignore
-  const createMarkerElement = (d: Object) => {
+  const createMarkerElement = (d: object) => {
     const data = d as Feature;
 
     const el = document.createElement("div") as HTMLDivElement;

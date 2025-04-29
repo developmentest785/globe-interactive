@@ -2,13 +2,14 @@
 
 import { createFileRoute } from "@tanstack/react-router";
 
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+// import geonamesAllCitiesWithAPopulationTenThousandOrMore from "@/data/geonames-all-cities-with-a-population-1000@public.geo.json";
+import geonamesAllCitiesWithAPopulationTenThousandOrMore from "@/data/geonames-all-cities-with-a-population-1000@public.geo.json";
 import {
   Form,
   FormControl,
@@ -26,7 +27,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CloudUpload, Paperclip } from "lucide-react";
+import {
+  Check,
+  ChevronsUpDown,
+  CloudUpload,
+  Command,
+  Paperclip,
+} from "lucide-react";
 import {
   FileInput,
   FileUploader,
@@ -34,6 +41,27 @@ import {
   FileUploaderItem,
 } from "@/components/ui/file-upload";
 import { RichTextEditor } from "@/components/rich-text-editor";
+import type { Feature } from "geojson";
+import type { Alumni } from "@/data/mockAlumni";
+import { cn } from "@/lib/utils";
+import {
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+
+interface GeoJSONFeature extends Feature {
+  lng: number;
+  lat: number;
+  size: number;
+}
 
 const formSchema = z.object({
   first: z.string().min(1).min(3).max(255),
@@ -53,25 +81,182 @@ export const Route = createFileRoute("/form")({
   component: MyForm,
 });
 
+// Generate years from 1970 to current year for graduation year dropdown
+const generateYears = () => {
+  const currentYear = new Date().getFullYear();
+  const years: string[] = [];
+  for (let year = currentYear; year >= 1960; year--) {
+    years.push(year.toString());
+  }
+  return years;
+};
+
 export default function MyForm() {
   const [files, setFiles] = useState<File[] | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedState, setSelectedState] = useState<string>("");
+  const graduationYears = useMemo(() => generateYears(), []);
 
   const dropZoneConfig = {
     maxFiles: 5,
     maxSize: 1024 * 1024 * 4,
     multiple: true,
   };
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      country: "",
+      state: "",
+      city: "",
+      gradYear: new Date().getFullYear().toString(),
+      imageUrl: "",
+      details: "",
+    },
   });
+
+  // Parse geoJSON data to extract countries, states, and cities
+  const { countries, statesByCountry, citiesByState } = useMemo(() => {
+    const features = (geonamesAllCitiesWithAPopulationTenThousandOrMore as any)
+      .features as GeoJSONFeature[];
+
+    // Extract unique countries
+    const countriesMap = new Map<string, string>();
+    const statesByCountryMap = new Map<string, Map<string, string>>();
+    const citiesByStateMap = new Map<string, Feature[]>();
+
+    features.forEach((feature) => {
+      const countryCode = feature.properties?.country_code;
+      const countryName = feature.properties?.cou_name_en || countryCode;
+      const stateCode = feature.properties?.admin1_code;
+      const stateName = stateCode || "";
+      const countryStateKey = `${countryCode}-${stateCode}`;
+
+      // Add country if not exists
+      if (countryCode && !countriesMap.has(countryCode)) {
+        countriesMap.set(countryCode, countryName);
+      }
+
+      // Add state if not exists
+      if (countryCode && stateCode) {
+        if (!statesByCountryMap.has(countryCode)) {
+          statesByCountryMap.set(countryCode, new Map<string, string>());
+        }
+
+        const statesMap = statesByCountryMap.get(countryCode);
+        if (statesMap && !statesMap.has(stateCode)) {
+          statesMap.set(stateCode, stateName);
+        }
+      }
+
+      // Add city by state
+      if (countryStateKey) {
+        if (!citiesByStateMap.has(countryStateKey)) {
+          citiesByStateMap.set(countryStateKey, []);
+        }
+
+        const cities = citiesByStateMap.get(countryStateKey);
+        if (cities) {
+          cities.push(feature);
+        }
+      }
+    });
+
+    return {
+      countries: Array.from(countriesMap.entries()).map(([code, name]) => ({
+        code,
+        name,
+      })),
+      statesByCountry: Object.fromEntries(
+        Array.from(statesByCountryMap.entries()).map(
+          ([countryCode, statesMap]) => [
+            countryCode,
+            Array.from(statesMap.entries()).map(([code, name]) => ({
+              code,
+              name,
+            })),
+          ],
+        ),
+      ),
+      citiesByState: Object.fromEntries(
+        Array.from(citiesByStateMap.entries()).map(
+          ([countryStateKey, cities]) => [countryStateKey, cities],
+        ),
+      ),
+    };
+  }, []);
+
+  // Reset state and city when country changes
+  useEffect(() => {
+    if (selectedCountry !== form.getValues("country")) {
+      form.setValue("state", "");
+      form.setValue("city", "");
+      setSelectedState("");
+    }
+  }, [form.getValues("country")]);
+
+  // Reset city when state changes
+  useEffect(() => {
+    if (selectedState !== form.getValues("state")) {
+      form.setValue("city", "");
+    }
+  }, [form.getValues("state")]);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log(values);
+      // Find the selected city coordinates
+      const countryCode = selectedCountry;
+      const stateCode = selectedState;
+      const countryStateKey = `${countryCode}-${stateCode}`;
+
+      const selectedCityFeatures = citiesByState[countryStateKey]?.filter(
+        (city) => city.properties?.name === values.city,
+      );
+
+      const selectedCityFeature = selectedCityFeatures?.[0] as
+        | GeoJSONFeature
+        | undefined;
+
+      // Format the address like in mockAlumni
+      const address = [
+        values.city,
+        stateCode ? `${stateCode}` : undefined,
+        countryCode,
+      ]
+        .filter(Boolean)
+        .join(", ");
+
+      // Create alumni object in the format of mockAlumni
+      const alumniData: Alumni = {
+        first: values.first,
+        last: values.last,
+        major: values.major,
+        degree: values.degree,
+        gradYear: values.gradYear,
+        country: countryCode,
+        address,
+        title: values.title,
+        imageUrl: values.imageUrl,
+        details: values.details,
+      };
+
+      console.log("Alumni Data:", alumniData);
+      console.log(
+        "City Coordinates:",
+        selectedCityFeature
+          ? {
+              lng: selectedCityFeature.lng,
+              lat: selectedCityFeature.lat,
+            }
+          : "City not found",
+      );
+
       toast(
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>
+          <code className="text-white">
+            {JSON.stringify(alumniData, null, 2)}
+          </code>
+        </pre>,
       );
     } catch (error) {
       console.error("Form submission error", error);
@@ -158,34 +343,68 @@ export default function MyForm() {
             />
           </div>
 
-          <div className="col-span-6">
+          <div className="col-span-6 flex">
             <FormField
               control={form.control}
               name="gradYear"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="w-full">
                   <FormLabel>Graduation Year</FormLabel>
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="1991" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value="m@example.com">
-                        m@example.com
-                      </SelectItem>
-                      <SelectItem value="m@google.com">m@google.com</SelectItem>
-                      <SelectItem value="m@support.com">
-                        m@support.com
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <FormControl>
+                        <Button
+                          variant="outline"
+                          role="combobox"
+                          className={cn(
+                            "w-[200px] justify-between",
+                            !field.value && "text-muted-foreground",
+                          )}
+                        >
+                          {field.value
+                            ? graduationYears.find(
+                                (year) => year === field.value,
+                              )
+                            : "Select Graduation Year"}
+                          <ChevronsUpDown className="opacity-50" />
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-[200px] p-0">
+                      <Command>
+                        <CommandInput
+                          placeholder="Search framework..."
+                          className="h-9"
+                        />
+                        <CommandList>
+                          <CommandEmpty>No Years found.</CommandEmpty>
+                          <CommandGroup>
+                            {graduationYears.map((year) => (
+                              <CommandItem
+                                value={year}
+                                key={year}
+                                onSelect={() => {
+                                  form.setValue("gradYear", year);
+                                }}
+                              >
+                                {year}
+                                <Check
+                                  className={cn(
+                                    "ml-auto",
+                                    year === field.value
+                                      ? "opacity-100"
+                                      : "opacity-0",
+                                  )}
+                                />
+                              </CommandItem>
+                            ))}
+                          </CommandGroup>
+                        </CommandList>
+                      </Command>
+                    </PopoverContent>
+                  </Popover>
                   <FormDescription>
-                    select the year you graduated
+                    Select the year you graduated
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -200,16 +419,24 @@ export default function MyForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Country</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select
+                onValueChange={(value) => {
+                  field.onChange(value);
+                  setSelectedCountry(value);
+                }}
+                defaultValue={field.value}
+              >
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Select Country" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  {countries.map(({ code, name }) => (
+                    <SelectItem key={code} value={code}>
+                      {name || code}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormDescription>To show the Pin for your city</FormDescription>
@@ -224,20 +451,36 @@ export default function MyForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>State / Province</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select
+                onValueChange={(value) => {
+                  field.onChange(value);
+                  setSelectedState(value);
+                }}
+                defaultValue={field.value}
+                disabled={!selectedCountry}
+              >
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select State if applied" />
+                    <SelectValue
+                      placeholder={
+                        selectedCountry
+                          ? "Select State/Province"
+                          : "Select Country First"
+                      }
+                    />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  {selectedCountry &&
+                    statesByCountry[selectedCountry]?.map(({ code, name }) => (
+                      <SelectItem key={code} value={code}>
+                        {name || code}
+                      </SelectItem>
+                    ))}
                 </SelectContent>
               </Select>
               <FormDescription>
-                Select the State or Provnice of your country
+                Select the State or Province of your country
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -250,16 +493,37 @@ export default function MyForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>City</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+                disabled={!selectedCountry || !selectedState}
+              >
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select your City" />
+                    <SelectValue
+                      placeholder={
+                        !selectedCountry
+                          ? "Select Country First"
+                          : !selectedState
+                            ? "Select State/Province First"
+                            : "Select your City"
+                      }
+                    />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  {selectedCountry &&
+                    selectedState &&
+                    citiesByState[`${selectedCountry}-${selectedState}`]?.map(
+                      (city) => (
+                        <SelectItem
+                          key={city.properties?.geoname_id}
+                          value={city.properties?.name}
+                        >
+                          {city.properties?.name}
+                        </SelectItem>
+                      ),
+                    )}
                 </SelectContent>
               </Select>
               <FormDescription>
@@ -294,7 +558,12 @@ export default function MyForm() {
               <FormControl>
                 <FileUploader
                   value={files}
-                  onValueChange={setFiles}
+                  onValueChange={(newFiles) => {
+                    setFiles(newFiles);
+                    if (newFiles && newFiles.length > 0) {
+                      field.onChange(`people/images/${newFiles[0].name}`);
+                    }
+                  }}
                   dropzoneOptions={dropZoneConfig}
                   className="relative bg-background rounded-lg p-2"
                 >
