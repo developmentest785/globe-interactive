@@ -33,8 +33,7 @@ import {
   FileUploaderContent,
   FileUploaderItem,
 } from "@/components/ui/file-upload";
-import TinyEditor from "@/components/ui/editor";
-import { Textarea } from "@/components/ui/textarea";
+import { RichTextEditor } from "@/components/rich-text-editor";
 
 const formSchema = z.object({
   first: z.string().min(1).min(3).max(255),
@@ -72,7 +71,7 @@ export default function MyForm() {
       toast(
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
           <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>,
+        </pre>
       );
     } catch (error) {
       console.error("Form submission error", error);
@@ -339,7 +338,7 @@ export default function MyForm() {
             <FormItem>
               <FormLabel>Bio</FormLabel>
               <FormControl>
-                <TinyEditor {...field} />
+                <RichTextEditor {...field} />
               </FormControl>
               <FormDescription>Add your short Bio</FormDescription>
               <FormMessage />
