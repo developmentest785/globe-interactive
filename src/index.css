@@ -5,7 +5,9 @@
 
 @font-face {
   font-family: "United Sans";
-  src: local("United Sans Reg Medium"), local("UnitedSansReg-Medium"),
+  src:
+    local("United Sans Reg Medium"),
+    local("UnitedSansReg-Medium"),
     url("../font/UnitedSansReg-Medium.woff2") format("woff2"),
     url("../font/UnitedSansReg-Medium.woff") format("woff");
   font-weight: 500;
@@ -15,7 +17,9 @@
 
 @font-face {
   font-family: "United Sans";
-  src: local("United Sans Reg Heavy"), local("UnitedSansReg-Heavy"),
+  src:
+    local("United Sans Reg Heavy"),
+    local("UnitedSansReg-Heavy"),
     url("../font/UnitedSansReg-Heavy.woff2") format("woff2"),
     url("../font/UnitedSansReg-Heavy.woff") format("woff");
   font-weight: 900;
@@ -25,7 +29,9 @@
 
 @font-face {
   font-family: "United Sans";
-  src: local("United Sans Reg Light"), local("UnitedSansReg-Light"),
+  src:
+    local("United Sans Reg Light"),
+    local("UnitedSansReg-Light"),
     url("../font/UnitedSansReg-Light.woff2") format("woff2"),
     url("../font/UnitedSansReg-Light.woff") format("woff");
   font-weight: 300;
@@ -35,7 +41,9 @@
 
 @font-face {
   font-family: "United Sans";
-  src: local("United Sans Reg Bold"), local("UnitedSansReg-Bold"),
+  src:
+    local("United Sans Reg Bold"),
+    local("UnitedSansReg-Bold"),
     url("../font/UnitedSansReg-Bold.woff2") format("woff2"),
     url("../font/UnitedSansReg-Bold.woff") format("woff");
   font-weight: bold;
@@ -45,7 +53,9 @@
 
 @font-face {
   font-family: "United Sans";
-  src: local("United Sans Reg Black"), local("UnitedSansReg-Black"),
+  src:
+    local("United Sans Reg Black"),
+    local("UnitedSansReg-Black"),
     url("../font/UnitedSansReg-Black.woff2") format("woff2"),
     url("../font/UnitedSansReg-Black.woff") format("woff");
   font-weight: 900;
@@ -341,11 +351,11 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklch(0 0 0);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.79 0.0591 82.83);
-  --input: oklch(0.79 0.0591 82.83);
+  --input: oklch(0 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -398,9 +408,20 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "United Sans", system-ui, -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    font-family:
+      "United Sans",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
       "Noto Color Emoji";
   }
 }
