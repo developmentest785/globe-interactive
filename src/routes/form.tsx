@@ -33,6 +33,7 @@ import {
   FileUploaderContent,
   FileUploaderItem,
 } from "@/components/ui/file-upload";
+import TinyEditor from "@/components/ui/editor";
 import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
@@ -71,7 +72,7 @@ export default function MyForm() {
       toast(
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
           <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>
+        </pre>,
       );
     } catch (error) {
       console.error("Form submission error", error);
@@ -338,18 +339,16 @@ export default function MyForm() {
             <FormItem>
               <FormLabel>Bio</FormLabel>
               <FormControl>
-                <Textarea
-                  placeholder="your current Bio"
-                  className="resize-none"
-                  {...field}
-                />
+                <TinyEditor {...field} />
               </FormControl>
               <FormDescription>Add your short Bio</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button variant="secondary" type="submit">
+          Submit
+        </Button>
       </form>
     </Form>
   );

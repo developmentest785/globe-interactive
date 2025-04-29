@@ -1,7 +1,7 @@
-import { Editor } from "@tinymce/tinymce-react";
+import { Editor as TinyEditor } from "@tinymce/tinymce-react";
 import { useState } from "react";
 
-export default function App() {
+export default function Editor() {
   const [data, setData] = useState("");
 
   const log = () => {
@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <>
-      <Editor
+      <TinyEditor
         initialValue="<p>This is the initial content of the editor.</p>"
         outputFormat="html"
         init={{
@@ -59,7 +59,7 @@ export default function App() {
         }) => {
           console.log(
             "Content was updated (handleOnChange):",
-            e.target.getContent()
+            e.target.getContent(),
           );
           setData(e.target.getContent());
         }}

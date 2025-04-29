@@ -93,7 +93,9 @@ function Globe() {
 
   return (
     <div
-      className={cn("relative h-screen w-full border-12 border-[#CFB991]")}
+      className={cn(
+        "relative h-screen w-full border-12 border-[#CFB991] bg-black text-white",
+      )}
       onClick={handleScreenClick}
     >
       <div className="inset-0 pointer-events-none absolute z-10  bg-linear-to-br from-transparent via-transparent via-75% to-180% to-[#CFB991]" />
@@ -176,7 +178,7 @@ function Globe() {
                 className={cn(
                   "pointer-events-auto h-16 text-black font-bold px-8 py-4 text-xl shadow-2xl shadow-[#72664f]",
                   "bg-linear-to-br from-[#CFB991] from-50% to-white",
-                  "scale-150 mt-36"
+                  "scale-150 mt-36",
                 )}
                 onClick={() => {
                   setShowExploreButton(false);
