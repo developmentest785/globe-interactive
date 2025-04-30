@@ -3,7 +3,6 @@
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
 
 # Build settings
 [build]
@@ -16,35 +15,3 @@
   port = 8888
   targetPort = 5173
 
-# Headers to improve security and performance
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-
-# Ensure JavaScript files are served with the correct MIME type
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-# Ensure ESM modules are served with the correct MIME type
-[[headers]]
-  for = "/*.mjs"
-  [headers.values]
-    Content-Type = "text/javascript"
-
-# Ensure CSS files are served with the correct MIME type
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Content-Type = "text/css"
-
-# Ensure proper MIME types for assets in the assets directory
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000"
