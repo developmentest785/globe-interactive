@@ -31,7 +31,7 @@ const initialState = {
   sky: 2,
   hexColor: "#0f0f0f",
   markerSize: 30,
-  resetTime: 20000,
+  resetTime: 30000,
 };
 
 function Globe() {
